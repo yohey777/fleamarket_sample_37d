@@ -1,0 +1,390 @@
+body {
+  width: 100%;
+  header {
+    .inner {
+      margin: 0 210px;
+      height: 90px;
+      padding-top: 8px;
+      .clearfix {
+        @include clearfix;
+        h1{
+          float: left;
+          a{
+            img{
+              width: 134px;
+              height: 36px;
+            }
+          }
+        }
+        .header-form{
+          height: 36px;
+          width: calc(100% - 150px);
+          float: right;
+          position: relative;
+          border: 1px solid #ccc;
+          input.header-input{
+            width: calc(100% - 36px);
+            font-size: 16px;
+            float: left;
+            padding: 9px 32px 9px 8px;
+            border: 0px solid white;
+          }
+          i.fa-search{
+            font-size: 14px;
+            float: right;
+            position: absolute;
+            right: 0;
+            width: 36px;
+            line-height: 36px;
+            text-align: center;
+          }
+        }
+      }
+      .nav-box.clearfix {
+        @include clearfix;
+        height: 38px;
+        margin-top: 10px;
+        nav.l-left{
+          float: left;
+          ul{
+            li{
+              @include list-style;
+              padding-right: 16px;
+              h2{
+                .nav__goods{
+                  height: 38px;
+                  line-height: 32px;
+                  font-size: 13.5px;
+                  display: block;
+                  color: #333;
+                  text-decoration: none;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .l-right{
+          float: right;
+          ul{
+            li{
+              @include list-style;
+              .user-nav__icon{
+                color: #333;
+                padding-right: 16px;
+                &__mypage{
+                  float: left;
+                  img{
+                    display: inline-block;
+                    width: 32px;
+                    border-radius: 16px;
+                  }
+                }
+                &__text{
+                  float: left;
+                  margin-left: 8px;
+                  line-height: 32px;
+                  font-size: 14px;
+                }
+                &__notification{
+                  float: left;
+                  i{
+                    display: inline-block;
+                    font-size: 17px;
+                    line-height: 32px;
+                  }
+                }
+
+                &__todo{
+                  float: left;
+                  i{
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 32px;
+                  }
+                }
+                .user-nav__icon__text{
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    #topMain{
+      height: 390px;
+      background-image:url("https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg");
+      div.topMainVisual{
+        margin: 0 290px;
+        position: relative;
+        &-content{
+          width: 480px;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          h2{
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+          }
+          p{
+            margin-top: 16px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+          }
+          .topMainVisual-store{
+            margin: 24px 0 0;
+            .pull-left{
+              margin-left: 8px;
+              float: left;
+              img{
+                height: 50px;
+                width: 170px;
+              }
+            }
+          }
+        }
+        img{
+          width: 440px;
+          float: right;
+        }
+      }
+    }
+    #pickUpContainer{
+      padding: 40px 0;
+      background-color: #f5f5f5;
+      h2{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 39.2px;
+        text-align: center;
+      }
+      .itemsBoxContainer{
+        margin: 0 250px;
+        h3.textCenter{
+          margin: 26px 11px;
+          text-align: center;
+          a{
+            color: #0099e8;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+        .itemsBoxContents{
+          height: 330px;
+          section.item-box{
+            margin-left: 20px;
+            width: 213px;
+            background-color: #fff;
+            float: left;
+            a{
+              width: 213px;
+              figure.item-box__photo{
+                img{
+                  width: 213px;
+                  height: 213px;
+                }
+              }
+              .item-box__content{
+                padding: 16px;
+                margin-top: 7px;
+                h3{
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  height: 48px;
+                }
+                .item-box__content__num.clearfix{
+                    @include clearfix;
+                    margin-top: 8px;
+                  .item-box__content__num-price{
+                    font-weight: 600;
+                    font-size: 15px;
+                    float: left;
+                  }
+                  .item-box__content__num-likes{
+                    float: right;
+                    font-size: 16px;
+                    i{
+                      margin-right: 4px;
+                    }
+                    span{
+                      margin-top: 1px;
+                    }
+                  }
+                }
+                p.item-box__content__num-tax{
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+        .viewAll{
+          padding: 30px 0 40px;
+          text-align: right;
+          a{
+            color: #0099e8;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  aside.app-barner{
+    height: 260px;
+    background-image: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?18476972);
+    .app-barner__contents{
+      margin: 0 345px;
+      position: relative;
+      &__inner{
+        position: absolute;
+        top: 30px;
+        left: 0;
+        h2{
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 33.6px;
+        }
+        p{
+          color: #fff;
+          font-size: 35px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+        &-icon{
+          margin-top: 20px;
+          figure{
+            position: absolute;
+            left: 0;
+            top: 100px;
+            img#mercari-logo{
+              float: left;
+              width: 68px;
+              height: 68px;
+            }
+          }
+          ul.clearfix{
+            @include clearfix;
+            position: absolute;
+            left: 70px;
+            top: 110px;
+            li{
+              margin-left: 16px;
+              list-style: none;
+              float: left;
+              a{
+                img{
+                  height: 40px;
+                  width: 133px;
+                }
+              }
+            }
+          }
+        }
+      }
+      figure{
+        position: absolute;
+        right: 0;
+        img{
+          height: 260px;
+        }
+      }
+    }
+  }
+  footer{
+    padding: 60px 0;
+    background-color: #212121;
+    nav{
+      margin: 0 210px;
+      ul{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        height: 482px;
+        li.footer-cell{
+          margin-right: 20px;
+          float: left;
+          width: 234px;
+          h2.footer-head{
+            font-size: 16px;
+            font-weight: 700;
+          }
+          ul{
+            li{
+              margin-top: 24px;
+              position: relative;
+              a{
+                color: #fff;
+                text-decoration: none;
+              }
+              a#countryName{
+                text-decoration: none;
+                line-height: 22px;
+                width: 234px;
+                img#countryImg{
+                  float: left;
+                  height: 22px;
+                  width: 22px;
+                  position: absolute;
+                  left: 70px;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #footer-logo{
+      margin-top: 40px;
+      width: 100%;
+      text-align: center;
+      img{
+        text-align: center;
+        height: 33px;
+      }
+    }
+    p{
+      margin-top: 8px;
+      text-align: center;
+      small{
+        color: #fff;
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+  }
+  #footer--sell-btn{
+    height: 160px;
+    width: 160px;
+    background-color: #ea352d;
+    border-radius: 80px;
+    z-index: 1000;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    div{
+      padding-top: 32px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .fa-camera{
+      font-size: 59px;
+      color: #fff;
+      margin: 8px auto;
+      padding: 0 50px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}

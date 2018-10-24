@@ -1,1 +1,698 @@
-%h1 メルカリ！
+%body
+  %header
+    .inner
+      .clearfix
+        %h1
+          %a
+            %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?59913465"}
+        %form.header-form.l-right
+          %input.header-input{name: "keyword", placeholder: "キーワードから探す", type: "search", value: ""}
+          %i.fa.fa-search.icon
+      .nav-box.clearfix
+        %nav.l-left
+          %ul
+            %li
+              %h2
+                %a.nav__goods{href:""}
+                  カテゴリーから探す
+            %li
+              %h2
+                %a.nav__goods{href:""}
+                  ブランドから探す
+        .l-right
+          %ul.user-nav
+            %li
+              %a.user-nav__icon{href: ""}
+                .user-nav__icon__mypage
+                  %img{src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"}/
+                %div.user-nav__icon__text マイページ
+            %li
+              %a.user-nav__icon{href: ""}
+                .user-nav__icon__notification
+                  %i.far.fa-bell.icon
+                %span.user-nav__icon__text お知らせ
+            %li
+              %a.user-nav__icon{href: ""}
+                .user-nav__icon__todo
+                  %i.fas.fa-check.icon
+                %span.user-nav__icon__text やることリスト
+
+  %main
+    %section#topMain
+      %div.topMainVisual
+        .topMainVisual-content
+          %h2
+            スマホでかんたん<br>フリマアプリ
+          %p
+            メルカリはスマホカメラからすぐに出品できる<br>購入時も安心な独自システムのアプリです
+          .topMainVisual-store.clearfix
+            %a.pull-left{href: "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", target: "_blank"}
+              %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?3221204175"}/
+            %a.pull-left{href: "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", target: "_blank"}
+              %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?3221204175"}/
+        %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?3221204175"}/
+
+    %section#pickUpContainer
+      %h2.pickUpCategory ピックアップ  カテゴリー
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a レディース　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m70326505285_1.jpg?1539625024"}
+              .item-box__content
+                %h3.item-box__content__name
+                  hyke  プルオーバー  スウェット ホワイト
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥11,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 17
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m39845060659_1.jpg?1540210170"}
+              .item-box__content
+                %h3.item-box__content__name
+                  IENA イエナ エンブロイダリー ブラウス 長袖
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 3,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m30229872873_1.jpg?1538804632"}
+              .item-box__content
+                %h3.item-box__content__name
+                  Maison Martin Margiela パンプス40
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m73519656086_1.jpg?1537049693"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ジーナシス  Tシャツ
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 3
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a メンズ　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m22896247438_1.jpg?1516525930"}
+              .item-box__content
+                %h3.item-box__content__name
+                  adidas チューブラー
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥4,900
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 20
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m57669441804_1.jpg?1540373741"}
+              .item-box__content
+                %h3.item-box__content__name
+                  モンクレール　ダウンジャケット
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 46,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m80309484202_1.jpg?1538954462"}
+              .item-box__content
+                %h3.item-box__content__name
+                  HERNO ヘルノ　ダウンジャケット
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 40,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 11
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m34496081107_1.jpg?1539870638"}
+              .item-box__content
+                %h3.item-box__content__name
+                  RVCA ルーカ　ロンT
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥19,600
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 15
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a ベビー・キッズ　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m10858650804_1.jpg?1540373981"}
+              .item-box__content
+                %h3.item-box__content__name
+                  BACK NUMBER KIDS ベスト
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥1,280
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 1
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m50564658300_1.jpg?1538776227"}
+              .item-box__content
+                %h3.item-box__content__name
+                  adidas アディダス キッズ スウェットフルジップパーカー
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 2,888
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m74195802570_1.jpg?1539514653"}
+              .item-box__content
+                %h3.item-box__content__name
+                  McGREGOR セーター、シャツ 140cm
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m86936763467_1.jpg?1540374185"}
+              .item-box__content
+                %h3.item-box__content__name
+                  カバーオール2枚セット80
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 5
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a コスメ・香水・美容　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m24089881679_1.jpg?1539713648"}
+              .item-box__content
+                %h3.item-box__content__name
+                  shu uemura アイシャドー2色セット
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥ 999
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 19
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m94200253100_1.jpg?1540374281"}
+              .item-box__content
+                %h3.item-box__content__name
+                  エトヴォス ミネラルチーク ハニーサックル
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 1,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 10
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m62248232957_1.jpg?1540374291"}
+              .item-box__content
+                %h3.item-box__content__name
+                  Maison Martin Margiela パンプス40
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m73519656086_1.jpg?1537049693"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ヴィセ イルミネートパウダー 01
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥1.400
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 3
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %h2.pickUpCategory ピックアップブランド
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a シャネル　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m19770260082_1.jpg?1540374332"}
+              .item-box__content
+                %h3.item-box__content__name
+                  パリ ドーヴィル CHANEL シャネル
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥13,200
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 10
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m42682110051_1.jpg?1540006545"}
+              .item-box__content
+                %h3.item-box__content__name
+                  シャネル CCクリーム 10ベージュ
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 3,800
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m30229872873_1.jpg?1538804632"}
+              .item-box__content
+                %h3.item-box__content__name
+                  Maison Martin Margiela パンプス40
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m25830793185_1.jpg?1540358455"}
+              .item-box__content
+                %h3.item-box__content__name
+                  CHANEL シャネル ヴェルニマニキュア
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥1,400
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 6
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a ルイヴィトン 　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m23716651259_1.jpg?1540374465"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ヴィトン ダミエ 二つ折り 長財布 ダミエ サラ
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥11,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 17
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m17174682722_1.jpg?1535345424"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ヴィトンアルマ
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 12,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m98145622507_1.jpg?1538740026"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ルイヴィトン カードケース ラドロー
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m31383630620_1.jpg?1536136869"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ルイヴィトン ブレスレット アズール ダミエ
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥12,600
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 16
+                %p.item-box__content__num-tax
+                  (税込)
+
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a シュプリーム　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m83601423738_1.jpg?1540374518"}
+              .item-box__content
+                %h3.item-box__content__name
+                  supreme mini logo パーカー
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥11,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 17
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m79049651492_1.jpg?1539604080"}
+              .item-box__content
+                %h3.item-box__content__name
+                  新品 Supreme 1994 L/S Tee 白 サイズM 18aw
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 3,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m27968124390_1.jpg?1540077406"}
+              .item-box__content
+                %h3.item-box__content__name
+                  supreme ビーニー ニット帽
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m40297087308_1.jpg?1539692593"}
+              .item-box__content
+                %h3.item-box__content__name
+                  supreme split box logo tee
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 3
+                %p.item-box__content__num-tax
+                  (税込)
+        .viewAll
+          %a すべての商品を見る
+      %section.itemsBoxContainer
+        %h3.textCenter
+          %a ナイキ　新着アイテム
+        .itemsBoxContents
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m13985432389_1.jpg?1539170087"}
+              .item-box__content
+                %h3.item-box__content__name
+                  NIKE AIR MAX 90 ULTRA 2.0 ESSENTIAL
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥11,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 17
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m45026670053_1.jpg?1540374808"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ナイキ ズーム ヴェイパーフライ 4%
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 3,500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 7
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m71328686797_1.jpg?1540374723"}
+              .item-box__content
+                %h3.item-box__content__name
+                  NIKE ナイキ Tシャツ XL
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ¥ 8,000
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 8
+                %p.item-box__content__num-tax
+                  (税込)
+          %section.item-box
+            %a
+              %figure.item-box__photo
+                %img{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m50983645154_1.jpg?1540374661"}
+              .item-box__content
+                %h3.item-box__content__name
+                  ナイキ スウェット サイズL
+                .item-box__content__num.clearfix
+                  .item-box__content__num-price
+                    ￥500
+                  .item-box__content__num-likes
+                    %i.far.fa-heart.icon
+                    %span 3
+                %p.item-box__content__num-tax
+                  (税込)
+        .viewAll
+          %a すべての商品を見る
+  %aside.app-barner
+    .app-barner__contents
+      .app-barner__contents__inner
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード!
+        .app-barner__contents__inner-icon
+          %figure
+            %img#mercari-logo{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?2900942513"}
+          %ul.clearfix
+            %li
+              %a{href: ""}
+                %img{src:  "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2900942513"}
+            %li
+              %a{href: ""}
+                %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2900942513"}
+      %figure
+        %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?2900942513"}
+  %footer
+    %nav
+      %ul
+        %li.footer-cell
+          %h2.footer-head
+            メルカリについて
+          %ul
+            %li
+              %a{href:""} 会社の概要(運営会社)
+            %li
+              %a プライバシーポリシー
+            %li
+              %a メルカリ利用規約
+            %li
+              %a メリカリ利用規約・有償ポイントに関する特約
+            %li
+              %a あんしんスマホサポート制度に関する利用特約
+            %li
+              %a コンプライアンスポリシー
+            %li
+              %a 個人データの安全管理に係る基本方針
+            %li
+              %a 特定商取引に関する表記
+            %li
+              %a 資金決済法に基づく表示
+            %li
+              %a 法令順守と犯罪防止のために
+            %li
+              %a 採用情報
+        %li.footer-cell
+          %h2.footer-head
+            メルカリを見る
+          %ul
+            %li
+              %a{href:""} カテゴリー一覧
+            %li
+              %a ブランド一覧
+            %li
+              %a 商品知識一覧
+            %li
+              %a 公式ブログ
+            %li
+              %a 公式Twitter
+            %li
+              %a 公式Facebook
+
+        %li.footer-cell
+          %h2.footer-head
+            ヘルプ＆ガイド
+          %ul
+            %li
+              %a{href:""} メルカリガイド
+            %li
+              %a メルカリロゴ利用ガイドライン
+            %li
+              %a お知らせ
+            %li
+              %a らくらくメルカリ便とは
+            %li
+              %a ゆうゆうメルカリ便とは
+            %li
+              %a 大型らくらくメルカリ便とは
+            %li
+              %a 車体取引ガイド
+            %li
+              %a 返品・返金ポリシー
+            %li
+              %a メルカリあんしん・あんぜん宣言！
+            %li
+              %a 偽ブランド品撲滅への取り組み
+            %li
+              %a メルカリボックス
+        %li.footer-cell
+          %h2.footer-head
+            国
+          %ul
+            %li
+              %a#countryName{href:""}
+                %img#countryImg{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/flag_jp.png?2900942513"}
+                日本
+    #footer-logo
+      %img{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2900942513"}
+    %p.footer-copyright
+      %small
+        © 2018 Mercari
+  #footer--sell-btn{href:""}
+    %div 出品
+    %i.fas.fa-camera
+
+
