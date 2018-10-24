@@ -67,7 +67,7 @@ Things you may want to cover:
 
 
 ##ER図
-https://gyazo.com/f6c4dc2b6b802016f69a4f6111825e91
+https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 
 ## likesテーブル
 
@@ -238,7 +238,4 @@ https://gyazo.com/f6c4dc2b6b802016f69a4f6111825e91
 
 ### Association
 - has_many :items
-
-
-
 
