@@ -11,3 +11,15 @@
   list-style-position: outside;
   float: left;
 }
+
+@mixin widepc {
+  @media (min-width: ($widepc)) {
+    @content;
+  }
+}
+
+@mixin smallpc {
+  @media (max-width: ($smallpc)) {
+    @content;
+  }
+}

@@ -1,12 +1,27 @@
+.clearfix{
+  @include clearfix;
+}
+.smallpcDelete{
+  margin-right: 5px;
+  @include smallpc{
+    display: none;
+  }
+}
+
 body {
   width: 100%;
   header {
     .inner {
-      margin: 0 210px;
+      @include widepc{
+        width: 1020px;
+      };
+      @include smallpc{
+        width: 700px;
+      };
+      margin: 0 auto;
       height: 90px;
       padding-top: 8px;
       .clearfix {
-        @include clearfix;
         h1{
           float: left;
           a{
@@ -41,9 +56,8 @@ body {
         }
       }
       .nav-box.clearfix {
-        @include clearfix;
         height: 38px;
-        margin-top: 10px;
+        margin-top: 8px;
         nav.l-left{
           float: left;
           ul{
@@ -118,40 +132,82 @@ body {
       height: 390px;
       background-image:url("https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg");
       div.topMainVisual{
-        margin: 0 290px;
-        position: relative;
-        &-content{
-          width: 480px;
-          position: absolute;
-          top: 50px;
-          left: 0;
-          h2{
-            font-weight: 700;
-            font-size: 60px;
-            line-height: 72px;
-          }
-          p{
-            margin-top: 16px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 32px;
-          }
-          .topMainVisual-store{
-            margin: 24px 0 0;
-            .pull-left{
-              margin-left: 8px;
-              float: left;
-              img{
-                height: 50px;
-                width: 170px;
+        @include widepc {
+          margin: 0 auto;
+          height: 390px;
+          position: relative;
+          max-width: 860px;
+          &-content{
+            width: 480px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            h2{
+              font-weight: 700;
+              font-size: 60px;
+              line-height: 72px;
+            }
+            p{
+              margin-top: 16px;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 32px;
+            }
+            .topMainVisual-store{
+              margin: 24px 0 0;
+              .pull-left{
+                margin-left: 8px;
+                float: left;
+                img{
+                  height: 50px;
+                  width: 170px;
+                }
               }
             }
           }
-        }
-        img{
-          width: 440px;
-          float: right;
-        }
+          img{
+            width: 440px;
+            float: right;
+          }
+        };
+        @include smallpc {
+          margin: 0 auto;
+          height: 290px;
+          position: relative;
+          max-width: 730px;
+          &-content{
+            width: 480px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            h2{
+              font-weight: bold;
+              font-size: 40px;
+              line-height: 52px;
+            }
+            p{
+              margin-top: 16px;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 32px;
+            }
+            .topMainVisual-store{
+              margin: 24px 0 0;
+              .pull-left{
+                margin-left: 8px;
+                float: left;
+                img{
+                  height: 38px;
+                  width: 128px;
+                }
+              }
+            }
+          }
+          img{
+            width: 327px;
+            float: right;
+          }
+        };
       }
     }
     #pickUpContainer{
@@ -164,18 +220,27 @@ body {
         text-align: center;
       }
       .itemsBoxContainer{
-        margin: 0 250px;
         h3.textCenter{
-          margin: 26px 11px;
+          margin: 26px auto;
+          width: 680px;
+          font-size: 22px;
           text-align: center;
           a{
+            display: inline;
+            text-align: center;
             color: #0099e8;
-            font-size: 22px;
             font-weight: 700;
           }
         }
         .itemsBoxContents{
           height: 330px;
+          margin: 0 auto;
+          @include widepc {
+            width: 940px;
+          };
+          @include smallpc {
+            width: 700px;
+          };
           section.item-box{
             margin-left: 20px;
             width: 213px;
@@ -197,18 +262,20 @@ body {
                   font-weight: 400;
                   line-height: 24px;
                   height: 48px;
+                  color: #333;
                 }
                 .item-box__content__num.clearfix{
-                    @include clearfix;
                     margin-top: 8px;
                   .item-box__content__num-price{
                     font-weight: 600;
-                    font-size: 15px;
+                    font-size: 16px;
                     float: left;
+                    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
                   }
                   .item-box__content__num-likes{
                     float: right;
                     font-size: 16px;
+                    color: #333;
                     i{
                       margin-right: 4px;
                     }
@@ -225,7 +292,14 @@ body {
           }
         }
         .viewAll{
+          @include smallpc{
+            width: 696px;
+          };
+          @include widepc{
+            width: 930px;
+          }
           padding: 30px 0 40px;
+          margin: 0 auto;
           text-align: right;
           a{
             color: #0099e8;
@@ -240,7 +314,8 @@ body {
     height: 260px;
     background-image: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?18476972);
     .app-barner__contents{
-      margin: 0 345px;
+      margin: 0 auto;
+      width: 750px;
       position: relative;
       &__inner{
         position: absolute;
@@ -271,7 +346,6 @@ body {
             }
           }
           ul.clearfix{
-            @include clearfix;
             position: absolute;
             left: 70px;
             top: 110px;
@@ -300,26 +374,35 @@ body {
   }
   footer{
     padding: 60px 0;
+    height: 480px;
     background-color: #212121;
     nav{
-      margin: 0 210px;
+      margin: 0 auto;
+      @include smallpc{
+        width: 700px;
+      };
+      @include widepc {
+        width: 1070px;
+      };
       ul{
         color: #fff;
         font-size: 14px;
         font-weight: 400;
         text-align: center;
-        height: 482px;
-        li.footer-cell{
+        .footer-cell:not(:last-child){
           margin-right: 20px;
+        }
+        li.footer-cell{
+          width: 22%;
           float: left;
-          width: 234px;
           h2.footer-head{
             font-size: 16px;
             font-weight: 700;
+            margin-bottom: 24px;
           }
           ul{
             li{
-              margin-top: 24px;
+              margin-top: 14px;
               position: relative;
               a{
                 color: #fff;
@@ -357,7 +440,9 @@ body {
       text-align: center;
       small{
         color: #fff;
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 14px;
+        font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
         display: inline-block;
       }
     }
@@ -386,5 +471,20 @@ body {
       text-align: center;
       display: inline-block;
     }
+  }
+}
+
+@media (min-width: 1061px){
+  .itemsBoxContents{
+    width: 940px;
+  }
+}
+
+@media (max-width: 1060px){
+  .itemsBoxContents{
+    width: 720px;
+  }
+  .itemsBoxContents > *:last-child.item-box {
+    background-color: red;
   }
 }
