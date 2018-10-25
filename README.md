@@ -129,11 +129,11 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 |method_of_payment|string|null: false|
 
 ### Association
-- has_many :reputations
-- has_many :items,  through: :deals
-- has_many :likes
-- has_many :comments
-- has_many :deals
+- has_many :reputations, dependent: :destroy
+- has_many :items,  through: :deals, dependent: :destroy
+- has_many :likes, dependent: :destroy
+- has_many :comments, dependent: :destroy
+- has_many :deals, dependent: :destroy
 
 ## itemsテーブル
 
@@ -156,13 +156,14 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 - belngs_to :subsize
 - belongs_to :brand
 - belongs_to:category
-- has_many :images
-- has_many :deliverys
-- has_many :comments
-- has_many :users,  through: :deals
-- has_many :likes
-- has_many :deals
-
+- has_many :images, dependent: :destroy
+- has_many :deliverys, dependent: :destroy
+- has_many :comments, dependent: :destroy
+- has_many :users,  through: :deals, dependent: :destroy
+- has_many :likes, dependent: :destroy
+- has_many :deals, dependent: :destroy
+- belongs_to :seller_id, class_name: 'User'
+- belongs_to :buyer_id, class_name: 'User'
 
 ## dealsテーブル
 
