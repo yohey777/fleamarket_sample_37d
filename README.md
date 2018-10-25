@@ -133,6 +133,7 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 - has_many :items,  through: :deals
 - has_many :likes
 - has_many :comments
+- has_many :deals
 
 ## itemsテーブル
 
@@ -144,11 +145,12 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 |created_at|string|null: false|
 |status|text|null: false|
 |price|integer|null: false|
-|size_id|integer|null: false, foreign_key: true|
+|subsize_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
 |seller_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
 |likes_count|integer|null: false|
+|category_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belngs_to :subsize
@@ -159,6 +161,7 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 - has_many :comments
 - has_many :users,  through: :deals
 - has_many :likes
+- has_many :deals
 
 
 ## dealsテーブル
@@ -206,7 +209,7 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 - belongs_to :user
 - belongs_to :item
 
-## deliveriesテーブル
+## deliverysテーブル
 |Column|Type|Options|
 |------|----|-------|
 |burden|string|null: false|
@@ -222,17 +225,16 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 ## prefectureテーブル
 |Column|Type|Options|
 |------|----|-------|
-|receiving_area|string|null: false|
-|delivery_area|string|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :deliveries
+- has_many :deliverys
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item_id|integer|null: false,foreign_key: true|
-|image_number|integer|null: false|
+|image_url|string|null: false|
 
 ### Association
 - belongs_to :item
