@@ -1,0 +1,37 @@
+%header
+  .inner
+    .clearfix
+      %h1
+        %a
+          %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?59913465"}
+      %form.header-form.l-right
+        %input.header-input{name: "keyword", placeholder: "キーワードから探す", type: "search", value: ""}
+        %i.fa.fa-search.icon
+    .nav-box.clearfix
+      %nav.l-left
+        %ul
+          %li
+            %h2
+              %a.nav__goods{href:""}
+                カテゴリーから探す
+          %li
+            %h2
+              %a.nav__goods{href:""}
+                ブランドから探す
+      .l-right
+        %ul.user-nav
+          %li
+            %a.user-nav__icon{href: ""}
+              .user-nav__icon__mypage
+                %img{src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"}/
+              .user-nav__icon__text マイページ
+          %li
+            %a.user-nav__icon{href: ""}
+              .user-nav__icon__notification
+                %i.far.fa-bell.icon
+              %span.user-nav__icon__text お知らせ
+          %li
+            %a.user-nav__icon{href: ""}
+              .user-nav__icon__todo
+                %i.fas.fa-check.icon
+              %span.user-nav__icon__text やることリスト
