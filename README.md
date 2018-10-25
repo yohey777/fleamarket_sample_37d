@@ -181,7 +181,7 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|Ccategory_id|integer|null: false,foreign_key: true|
+|category_id|integer|null: false,foreign_key: true|
 
 ### Association
 
@@ -191,7 +191,7 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false,foreign_key: true|
-|enum|integer|null: false|
+|reputation|integer|null: false|
 
 
 ### Association
