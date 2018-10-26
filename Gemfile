@@ -71,3 +71,5 @@ gem 'ransack'
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
+gem 'rspec-rails'
+gem 'factory_girl_rails', "~> 4.4.1"
