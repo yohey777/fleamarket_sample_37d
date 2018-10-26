@@ -1,0 +1,490 @@
+.clearfix{
+  @include clearfix;
+}
+.smallpcDelete{
+  margin-right: 5px;
+  @include smallpc{
+    display: none;
+  }
+}
+
+body {
+  width: 100%;
+  header {
+    .inner {
+      @include widepc{
+        width: 1020px;
+      };
+      @include smallpc{
+        width: 700px;
+      };
+      margin: 0 auto;
+      height: 90px;
+      padding-top: 8px;
+      .clearfix {
+        h1{
+          float: left;
+          a{
+            img{
+              width: 134px;
+              height: 36px;
+            }
+          }
+        }
+        .header-form{
+          height: 36px;
+          width: calc(100% - 150px);
+          float: right;
+          position: relative;
+          border: 1px solid #ccc;
+          input.header-input{
+            width: calc(100% - 36px);
+            font-size: 16px;
+            float: left;
+            padding: 9px 32px 9px 8px;
+            border: 0px solid white;
+          }
+          i.fa-search{
+            font-size: 14px;
+            float: right;
+            position: absolute;
+            right: 0;
+            width: 36px;
+            line-height: 36px;
+            text-align: center;
+          }
+        }
+      }
+      .nav-box.clearfix {
+        height: 38px;
+        margin-top: 8px;
+        nav.l-left{
+          float: left;
+          ul{
+            li{
+              @include list-style;
+              padding-right: 16px;
+              h2{
+                .nav__goods{
+                  height: 38px;
+                  line-height: 32px;
+                  font-size: 13.5px;
+                  display: block;
+                  color: #333;
+                  text-decoration: none;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .l-right{
+          float: right;
+          ul{
+            li{
+              @include list-style;
+              .user-nav__icon{
+                color: #333;
+                padding-right: 16px;
+                &__mypage{
+                  float: left;
+                  img{
+                    display: inline-block;
+                    width: 32px;
+                    border-radius: 16px;
+                  }
+                }
+                &__text{
+                  float: left;
+                  margin-left: 8px;
+                  line-height: 32px;
+                  font-size: 14px;
+                }
+                &__notification{
+                  float: left;
+                  i{
+                    display: inline-block;
+                    font-size: 17px;
+                    line-height: 32px;
+                  }
+                }
+
+                &__todo{
+                  float: left;
+                  i{
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 32px;
+                  }
+                }
+                .user-nav__icon__text{
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    #topMain{
+      height: 390px;
+      background-image:url("https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg");
+      div.topMainVisual{
+        @include widepc {
+          margin: 0 auto;
+          height: 390px;
+          position: relative;
+          max-width: 860px;
+          &-content{
+            width: 480px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            h2{
+              font-weight: 700;
+              font-size: 60px;
+              line-height: 72px;
+            }
+            p{
+              margin-top: 16px;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 32px;
+            }
+            .topMainVisual-store{
+              margin: 24px 0 0;
+              .pull-left{
+                margin-left: 8px;
+                float: left;
+                img{
+                  height: 50px;
+                  width: 170px;
+                }
+              }
+            }
+          }
+          img{
+            width: 440px;
+            float: right;
+          }
+        };
+        @include smallpc {
+          margin: 0 auto;
+          height: 290px;
+          position: relative;
+          max-width: 730px;
+          &-content{
+            width: 480px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            h2{
+              font-weight: bold;
+              font-size: 40px;
+              line-height: 52px;
+            }
+            p{
+              margin-top: 16px;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 32px;
+            }
+            .topMainVisual-store{
+              margin: 24px 0 0;
+              .pull-left{
+                margin-left: 8px;
+                float: left;
+                img{
+                  height: 38px;
+                  width: 128px;
+                }
+              }
+            }
+          }
+          img{
+            width: 327px;
+            float: right;
+          }
+        };
+      }
+    }
+    #pickUpContainer{
+      padding: 40px 0;
+      background-color: #f5f5f5;
+      h2{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 39.2px;
+        text-align: center;
+      }
+      .itemsBoxContainer{
+        h3.textCenter{
+          margin: 26px auto;
+          width: 680px;
+          font-size: 22px;
+          text-align: center;
+          a{
+            display: inline;
+            text-align: center;
+            color: #0099e8;
+            font-weight: 700;
+          }
+        }
+        .itemsBoxContents{
+          height: 330px;
+          margin: 0 auto;
+          @include widepc {
+            width: 940px;
+          };
+          @include smallpc {
+            width: 700px;
+          };
+          section.item-box{
+            margin-left: 20px;
+            width: 213px;
+            background-color: #fff;
+            float: left;
+            a{
+              width: 213px;
+              figure.item-box__photo{
+                img{
+                  width: 213px;
+                  height: 213px;
+                }
+              }
+              .item-box__content{
+                padding: 16px;
+                margin-top: 7px;
+                h3{
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  height: 48px;
+                  color: #333;
+                }
+                .item-box__content__num.clearfix{
+                    margin-top: 8px;
+                  .item-box__content__num-price{
+                    font-weight: 600;
+                    font-size: 16px;
+                    float: left;
+                    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+                  }
+                  .item-box__content__num-likes{
+                    float: right;
+                    font-size: 16px;
+                    color: #333;
+                    i{
+                      margin-right: 4px;
+                    }
+                    span{
+                      margin-top: 1px;
+                    }
+                  }
+                }
+                p.item-box__content__num-tax{
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+        .viewAll{
+          @include smallpc{
+            width: 696px;
+          };
+          @include widepc{
+            width: 930px;
+          }
+          padding: 30px 0 40px;
+          margin: 0 auto;
+          text-align: right;
+          a{
+            color: #0099e8;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  aside.app-barner{
+    height: 260px;
+    background-image: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?18476972);
+    .app-barner__contents{
+      margin: 0 auto;
+      width: 750px;
+      position: relative;
+      &__inner{
+        position: absolute;
+        top: 30px;
+        left: 0;
+        h2{
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 33.6px;
+        }
+        p{
+          color: #fff;
+          font-size: 35px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+        &-icon{
+          margin-top: 20px;
+          figure{
+            position: absolute;
+            left: 0;
+            top: 100px;
+            img#mercari-logo{
+              float: left;
+              width: 68px;
+              height: 68px;
+            }
+          }
+          ul.clearfix{
+            position: absolute;
+            left: 70px;
+            top: 110px;
+            li{
+              margin-left: 16px;
+              list-style: none;
+              float: left;
+              a{
+                img{
+                  height: 40px;
+                  width: 133px;
+                }
+              }
+            }
+          }
+        }
+      }
+      figure{
+        position: absolute;
+        right: 0;
+        img{
+          height: 260px;
+        }
+      }
+    }
+  }
+  footer{
+    padding: 60px 0;
+    height: 480px;
+    background-color: #212121;
+    nav{
+      margin: 0 auto;
+      @include smallpc{
+        width: 700px;
+      };
+      @include widepc {
+        width: 1070px;
+      };
+      ul{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        .footer-cell:not(:last-child){
+          margin-right: 20px;
+        }
+        li.footer-cell{
+          width: 22%;
+          float: left;
+          h2.footer-head{
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+          }
+          ul{
+            li{
+              margin-top: 14px;
+              position: relative;
+              a{
+                color: #fff;
+                text-decoration: none;
+              }
+              a#countryName{
+                text-decoration: none;
+                line-height: 22px;
+                width: 234px;
+                img#countryImg{
+                  float: left;
+                  height: 22px;
+                  width: 22px;
+                  position: absolute;
+                  left: 70px;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #footer-logo{
+      margin-top: 40px;
+      width: 100%;
+      text-align: center;
+      img{
+        text-align: center;
+        height: 33px;
+      }
+    }
+    p{
+      margin-top: 8px;
+      text-align: center;
+      small{
+        color: #fff;
+        font-size: 13px;
+        line-height: 14px;
+        font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        display: inline-block;
+      }
+    }
+  }
+  #footer--sell-btn{
+    height: 160px;
+    width: 160px;
+    background-color: #ea352d;
+    border-radius: 80px;
+    z-index: 1000;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    div{
+      padding-top: 32px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .fa-camera{
+      font-size: 59px;
+      color: #fff;
+      margin: 8px auto;
+      padding: 0 50px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 1061px){
+  .itemsBoxContents{
+    width: 940px;
+  }
+}
+
+@media (max-width: 1060px){
+  .itemsBoxContents{
+    width: 720px;
+  }
+  .itemsBoxContents > *:last-child.item-box {
+    background-color: red;
+  }
+}
