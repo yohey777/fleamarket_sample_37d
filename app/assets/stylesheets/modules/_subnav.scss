@@ -1,13 +1,32 @@
 nav#subNav{
   height: 50px;
   border-top: 1px solid #eee;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
-  ul{
-    margin: 0 210px;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.16);
+  ul.subNavUl{
+    @include smallpc {
+      width: 700px;
+    };
+    @include widepc {
+      width: 1020px;
+    };
+    margin: 0 auto;
     padding:17px 0 16px;
+    height: 16px;
     li{
-      float: left;
-      font-size: 14px;
+      display: inline-block;
+      line-height: 1.2em;
+      a{
+        font-size: 14px;
+        font-weight: 400;
+        .active{
+          font-weight: 600;
+        }
+      }
+      i.fa-angle-right{
+        margin: 0 8px;
+        width: 6px;
+        color: rgb(136, 136, 136);
+      }
     }
   }
 }

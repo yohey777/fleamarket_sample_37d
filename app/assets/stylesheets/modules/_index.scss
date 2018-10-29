@@ -19,7 +19,7 @@ body {
         width: 700px;
       };
       margin: 0 auto;
-      height: 90px;
+      height: 82px;
       padding-top: 8px;
       .clearfix {
         h1{
@@ -71,7 +71,6 @@ body {
                   font-size: 13.5px;
                   display: block;
                   color: #333;
-                  text-decoration: none;
                   font-weight: 400;
                 }
               }
@@ -270,7 +269,6 @@ body {
                     font-weight: 600;
                     font-size: 16px;
                     float: left;
-                    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
                   }
                   .item-box__content__num-likes{
                     float: right;
@@ -406,7 +404,6 @@ body {
               position: relative;
               a{
                 color: #fff;
-                text-decoration: none;
               }
               a#countryName{
                 text-decoration: none;
@@ -442,7 +439,6 @@ body {
         color: #fff;
         font-size: 13px;
         line-height: 14px;
-        font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
         display: inline-block;
       }
     }
