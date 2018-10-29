@@ -553,23 +553,7 @@
                   (税込)
         .viewAll
           %a すべての商品を見る
-  %aside.app-barner
-    .app-barner__contents
-      .app-barner__contents__inner
-        %h2 スマホでかんたんフリマアプリ
-        %p 今すぐ無料ダウンロード!
-        .app-barner__contents__inner-icon
-          %figure
-            %img#mercari-logo{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?2900942513"}
-          %ul.clearfix
-            %li
-              %a{href: ""}
-                %img{src:  "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2900942513"}
-            %li
-              %a{href: ""}
-                %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2900942513"}
-      %figure
-        %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?2900942513"}
+  = render 'items/appbarner'
   = render 'items/footer'
   = render 'items/sellBtn'
 
