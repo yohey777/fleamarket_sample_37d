@@ -1,26 +1,66 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :nickname
-    %em (6 characters maximum)
-    %br/
-    = f.text_field :nickname, autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+%body
+  .single-container
+    .single-header
+      %h1
+        %a{:href => "https://www.mercari.com/jp/"}
+          %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2960600120"}/
+    .single-main
+      .l-single-container
+        %h2.l-single-head 新規会員登録
+        .l-single-inner
+          .l-single-content
+            %a.btn-default.btn-mail{:href => "https://www.mercari.com/jp/signup/registration/"}
+              %i.far.fa-envelope
+              メールアドレスで登録
+            %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+              %i.fab.fa-facebook
+              Facebookでログイン
+            %button#google-login.btn-default.btn-sns.btn-sns-google
+              %i.fab.fa-google-plus-g
+              Googleでログイン
+
+          %form{:action => "https://www.mercari.com/jp/login/", :method => "POST", :novalidate => "novalidate"}
+            .login-form-inner
+              .form-group
+      %footer.single-footer
+        %nav
+          %ul.clearfix
+            %li
+              %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+            %li
+              %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+            %li
+              %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+        %a.single-footer-logo{:href => "https://www.mercari.com/jp/"}
+          %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2960600120", :width => "80"}/
+        %p
+          %small © 2018 Mercari
+
+
+
+/ %h2 Sign up
+/ = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+/   = devise_error_messages!
+/   .field
+/     = f.label :nickname
+/     %em (6 characters maximum)
+/     %br/
+/     = f.text_field :nickname, autofocus: true
+/   .field
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, autofocus: true, autocomplete: "email"
+/   .field
+/     = f.label :password
+/     - if @minimum_password_length
+/       %em
+/         (#{@minimum_password_length} characters minimum)
+/     %br/
+/     = f.password_field :password, autocomplete: "new-password"
+/   .field
+/     = f.label :password_confirmation
+/     %br/
+/     = f.password_field :password_confirmation, autocomplete: "new-password"
+/   .actions
+/     = f.submit "Sign up"
+/ = render "devise/shared/links"
