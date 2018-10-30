@@ -1,4 +1,3 @@
-
 %body
   .single-container
     .single-header
@@ -12,10 +11,10 @@
           %a{:href => "https://www.mercari.com/jp/signup/?after_save_callback=https%3A%2F%2Fwww.mercari.com%2Fjp%2F"} 新規会員登録
         .login-form-inner
           %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-            %i.icon-facebook
+            %i.fab.fa-facebook
             Facebookでログイン
           %button#google-login.btn-default.btn-sns.btn-sns-google
-            %i.icon-google-plus
+            %i.fab.fa-google-plus-g
             Googleでログイン
 
 
@@ -24,9 +23,10 @@
             .form-group
             = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
               .field
-                = f.email_field :email, autofocus: true, autocomplete: "email",style: ' width: 100%; height: 100%; style="font-size:50px;',placeholder: 'メールアドレス',:size => 100
+                = f.email_field :email, autofocus: true, autocomplete: "email",style: ' width: 100%; height: 100%; ',placeholder: 'メールアドレス',:size => 100
               .field
                 = f.password_field :password, autocomplete: "current-password",autocomplete: "password",style: 'width: 100%;height: 100%;',placeholder: 'パスワード'
+
             /   %input.login-input-text.input-default{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
             / .form-group
             /   %input.login-input-text.input-default{:name => "password", :placeholder => "パスワード", :type => "password"}/
