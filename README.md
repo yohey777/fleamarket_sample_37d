@@ -67,136 +67,92 @@ Things you may want to cover:
 
 
 ##ER図
-https://gyazo.com/9c08879aa1418d0651a1852650a620c7
+https://gyazo.com/c6ce7c1d33a5cd2bf005277a2c99bd50
 
-## likesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
-
-
-## mainsizeテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-### Association
-- has_many :subsizes
-
-
-## subsizeテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|mainsize_id|integer|null: false,foreign_key: true|
-
-### Association
-- belongs_to :mainsize
-
-
-## dealテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
-|item_id|integer|null: false,foreign_key: true|
-
-### Association
-- belongs_to :mainsize
 
 ## Usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false, add_index, unique: true|
-|mail|string|null: false, add_index, unique: true|
+|email|string|null: false, add_index, unique: true|
 |password|string|null: false|
-|profile_comment|text|-------|
-|telephone_number|string|null: false, add_index, unique: true|
+|profile|text|-------|
+|phone|string|null: false, unique: true|
 |first_name|string|null: false|
 |last_name|string|null: false|
-|prefecture|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
 |address|string|null: false|
-|birth_day|string|null: false|
-|method_of_payment|string|null: false|
+|birthday|string|null: false|
+|payment_method|string|null: false|
 
 ### Association
-- has_many :reputations, dependent: :destroy
-- has_many :items,  through: :deals, dependent: :destroy
+- has_many :buyer_deals, class_name: 'Deal', foreign_key: :buyer_id, dependent: :destroy
+- has_many :seller_deals, class_name: 'Deal', foreign_key: :seller_id, dependent: :destroy
+- has_many :items,  through: :deals
 - has_many :likes, dependent: :destroy
 - has_many :comments, dependent: :destroy
-- has_many :deals, dependent: :destroy
+- has_many :rates, dependent: :destroy
+
+
+## ratesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|rate|integer|null: false|
+|deal_id|integer|null: false,foreign_key: true|
+|rater_id|integer|null: false,foreign_key: true|
+|ratee_id|integer|null: false,foreign_key: true|
+
+### Association
+- belongs_to :deal
+- belongs_to :rater, class_name: 'User'
+- belongs_to :ratee, class_name: 'User'
+
+### enum
+- rates
+
 
 ## itemsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|detail|text|null: false|
-|user_id|integer|null: false,foreign_key: true|
-|created_at|string|null: false|
-|status|text|null: false|
+|name|string|null: false, add_index|
 |price|integer|null: false|
-|subsize_id|integer|null: false, foreign_key: true|
-|brand_id|integer|null: false, foreign_key: true|
-|seller_id|integer|null: false, foreign_key: true|
-|buyer_id|integer|null: false, foreign_key: true|
+|description|text|null: false, add_index|
+|status|integer|null: false|
+|prefecuture|integer|null: false|
+|expense|integer|null: false|
+|shipping_method|integer|null: false|
+|arrival_date|integer|null: false|
 |likes_count|integer|null: false|
-|category_id|integer|null: false, foreign_key: true|
+|L_category_id|integer|null: false, foreign_key: true|
+|M_category_id|integer|null: false, foreign_key: true|
+|S_category_id|integer|null: false, foreign_key: true|
+|size_id|integer|null: false, foreign_key: true|
+|brand_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belngs_to :subsize
+- belongs_to :L_category
+- belongs_to :M_category
+- belongs_to :S_category
+- belongs_to :size
 - belongs_to :brand
-- belongs_to:category
 - has_many :images, dependent: :destroy
-- has_many :deliverys, dependent: :destroy
 - has_many :comments, dependent: :destroy
-- has_many :users,  through: :deals, dependent: :destroy
 - has_many :likes, dependent: :destroy
-- has_many :deals, dependent: :destroy
-- belongs_to :seller_id, class_name: 'User'
-- belongs_to :buyer_id, class_name: 'User'
+- has_many :buyer_deals, class_name: 'Deal', foreign_key: :buyer_id, dependent: :destroy
+- has_many :seller_deals, class_name: 'Deal', foreign_key: :seller_id, dependent: :destroy
+- has_many :seller, class_name: 'User', foreign_key: :seller_id, through: :deals
+- has_many :buyer, class_name: 'User', foreign_key: :buyer_id, through: :deals
 
-## dealsテーブル
+### enum
+- status
+- prefecuture
+- expense
+- shipping_method
+- arrival_date
 
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|dealt_at|datetime|null: false|
-
-### Association
-
-- belongs_to :item
-- belongs_to :user
-
-## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|category_id|integer|null: false,foreign_key: true|
-
-### Association
-
-- has_many :items
-
-## reputationsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
-|reputation|integer|null: false|
-
-
-### Association
-- belongs_to :user
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -210,43 +166,97 @@ https://gyazo.com/9c08879aa1418d0651a1852650a620c7
 - belongs_to :user
 - belongs_to :item
 
-## deliverysテーブル
+
+## likesテーブル
+
 |Column|Type|Options|
 |------|----|-------|
-|burden|string|null: false|
-|shipping_method|string|null: false|
-|item_id|integer|null: false,foreign_key: true|
-|prefecture_id|integer|null: false,foreign_key: true|
-
+|item_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
+- belongs_to :user
 - belongs_to :item
-- belongs_to :prefecture
 
-## prefectureテーブル
+
+## dealsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|item_id|integer|null: false, foreign_key: true|
+|seller_id|integer|null: false, foreign_key: true|
+|buyer_id|integer|null: false, foreign_key: true|
+
+### Association
+
+- has_one :rate
+- belongs_to :item
+- belongs_to :seller, class_name: 'User', foreign_key: :seller_id
+- belongs_to :buyer, class_name: 'User', foreign_key: :buyer_id
+
+
+## L_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
 ### Association
-- has_many :deliverys
+- has_many :items
+- has_many :M_categories
+
+
+## M_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|L_category_id|integer|null: false, foreign_key: true|
+
+
+### Association
+- belongs_to :L_category
+- has_many :items
+- has_many :S_categories
+
+
+## S_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|M_category_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :M_category
+- has_many :items
+- has_many :sizes
+
+
+## sizesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|S_category_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :S_category
+- has_many :items
+
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :items
+
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|integer|null: false,foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 |image_url|string|null: false|
 
 ### Association
 - belongs_to :item
-
-
-## categoryテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|parent_id|integer|null: false|
-
-### Association
-- has_many :items
 
