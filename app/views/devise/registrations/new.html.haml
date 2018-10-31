@@ -1,26 +1,20 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :nickname
-    %em (6 characters maximum)
-    %br/
-    = f.text_field :nickname, autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+%body
+  .single-container
+    = render 'devise/registration-header'
+    .single-main
+      .l-single-container
+        %h2.l-single-head 新規会員登録
+        .l-single-inner
+          .l-single-content
+            %a.btn-default.btn-mail{href: "https://www.mercari.com/jp/signup/registration/"}
+              %i.far.fa-envelope
+              メールアドレスで登録
+            %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+              %i.fab.fa-facebook
+              Facebookで登録
+            %button#google-login.btn-default.btn-sns.btn-sns-google
+              %i.fab.fa-google-plus-g
+              Googleで登録
+            .login-form-inner
+              .form-group
+      = render 'devise/registration-footer'
