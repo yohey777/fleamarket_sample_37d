@@ -1,0 +1,30 @@
+%body
+  = render 'items/header'
+  %nav#subNav
+    %ul.subNavUl
+      %li
+        %a
+          %span メルカリ
+        %i.fa.fa-angle-right.icon
+      %li
+        %a
+          %span マイページ
+        %i.fa.fa-angle-right.icon
+      %li
+        %a
+          %span.active ログアウト
+  %main
+    .mypage-container.clearfix
+      .l-content
+        .l-chapter-container
+          %form.l-single-inner{action: "https://www.mercari.com/jp/logout/", :method => "POST", novalidate: "novalidate"}
+            .l-single-content
+              %button.btn-default.btn-red{type: "submit"} ログアウト
+              %input{name: "__csrf_value", type: "hidden", value:  "15beea0077c47506b75533ba7949f18c6d5a24a214c7b03eb5a869bb00a51d6277460eb8ff1036185ac8baa703733163bb46331a4805e4e944b1481b25993dcf4"}/
+
+      .mypage-container__side
+        = render 'items/sidebar'
+
+  = render 'items/appbarner'
+  = render 'items/footer'
+  = render 'items/sellBtn'
