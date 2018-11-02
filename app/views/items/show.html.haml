@@ -8,10 +8,12 @@
         %i.fa.fa-angle-right.icon
       %li
         %a
-          %span.active 新品未使用！シュプリーム レザーIDホルダー ブラック
+          %span.active
+            = @item.name
   %main
     %section.item-box-container.l-single.container
-      %h1.item-name 新品未使用！シュプリーム レザーIDホルダー ブラック
+      %h1.item-name
+        = @item.name
       .itemMainContent.clearfix
         .item-photo
           .owl-stage-outer
@@ -52,54 +54,58 @@
             %tr
               %th カテゴリー
               %td
-                %a{href: ""} メンズ
+                %a{href: ""}
+                  = @item.L_category_id
                 %a{href: ""}
                   .item-sub-category
                     %i.fas.fa-angle-right.blue-icon
-                    アクセサリー
+                    = @item.M_category_id
                 %a{href: ""}
                   .item-sub-category
                     %i.fas.fa-angle-right.blue-icon
-                    その他
+                    = @item.S_category_id
             %tr
               %th ブランド
               %td
                 %a{href: ""}
-                  シュプリーム
+                  =@item.brand_id
             %tr
               %th 商品の状態
-              %td 新品、未使用
+              %td
+                = @item.status
             %tr
               %th 配送料の負担
-              %td 送料込み(出品者負担)
+              %td
+                = @item.expense
             %tr
               %th 配送の方法
-              %td らくらくメルカリ便
+              %td
+                = @item.shipping_method
             %tr
               %th 配送元地域
               %td
-                %a{href: ""} 大阪府
+                %a{href: ""}
+                  = @item.prefecture
             %tr
               %th 発送日の目安
-              %td 1~2日で発送
+              %td
+                = @item.arrival_date
       .item-price-box
-        %span.item-price.bold ¥ 30,000
+        %span.item-price.bold
+          = number_to_currency(@item.price, :unit => "￥", :precision => 0)
         %span.item-tax (税込)
         %span.item-shipping-fee 送料込み
       %a.item-buy-btn.bold{"data-client" => "hidden", href: ""} 購入画面に進む
       .item-description
         %p.item-description-inner
-          国内正規品 新品 18AW Supreme Leather ID Holder + Wallet シュプリーム レザー IDホルダー ウォレット 財布<br>
-          ブラック<br><br>
-          【商品】<br>Supreme Leather ID Holder + Wallet<br>シュプリーム レザー IDホルダー ウォレット<br><br>
-          【カラー】<br>ブラック 黒<br><br>【購入先】<br>Supreme 大阪<br><br>
-          【備考】<br>ご希望の方にはレシートのコピーをおつけします<br>
+          = @item.description
       .item-button-container.clearfix
         .item-button-left
           %button.item-button
             %i.far.fa-heart
             %span いいね!
-            %span.fade-in-down 3
+            %span.fade-in-down
+              = @item.like_count
           %a.item-button{ href: ""}
             %i.far.fa-flag
             %span 不適切な商品の報告
