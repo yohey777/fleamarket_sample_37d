@@ -27,19 +27,19 @@
         .l-single-inner
           .l-single-content
             .form-group-registration
-              %label{:for => "telephone"} 認証番号
-              %input.input-default{:name => "nitelephone", :placeholder => "認証番号を入力", :type => "text", :value => ""}/
+              %label{for: "telephone"} 認証番号
+              %input.input-default{name: "nitelephone", placeholder: "認証番号を入力", type: "text", value: ""}/
               %br
               %br
               %p.firstmessage SMSで届いた認証番号を入力してください
-              %button.btn-default.btn-red{:type => "submit"} 認証して完了
+              %button.btn-default.btn-red{type: "submit"} 認証して完了
         .l-single-container
         .l-single-inner
           .l-single-content
             .form-group-registration
               %p.second-message 30秒たっても認証番号が届かない方へ。
               %p.third-message 電話で認証番号を聞くこともできます
-              %button.btn-default.btn-red{:type => "submit"} 電話で認証番号を聞く（通話無料）
+              %button.btn-default.btn-red{type: "submit"} 電話で認証番号を聞く（通話無料）
         .l-single-inner
           .l-single-content
             .form-group-teleregistration
@@ -53,8 +53,4 @@
                 %span.sms SMS受信設定
                 を確認してもう一度電話番号をご入力ください。
               %p
-
-
-
-
       = render 'devise/shared/registration-footer'

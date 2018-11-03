@@ -2,8 +2,8 @@
   .single-container
     .single-header
       %h1
-        %a{:href => "https://www.mercari.com/jp/"}
-          %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1098098883"}/
+        %a{href: "https://www.mercari.com/jp/"}
+          %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1098098883"}/
       %nav.progress-bar.signup-bar
         %ol.clearfix
           %li
@@ -27,12 +27,12 @@
         .l-single-inner
           .l-single-content
             .form-group-registration
-              %label{:for => "telephone"} 携帯電話の番号
-              %input.input-default{:name => "nitelephone", :placeholder => "携帯電話番号の入力", :type => "text", :value => ""}/
+              %label{for: "telephone"} 携帯電話の番号
+              %input.input-default{name: "nitelephone", placeholder: "携帯電話番号の入力", type: "text", value: ""}/
               %br
               %br
               %p.firstmessage 本人確認のため、携帯電話のSMS(ショートメッセージサービス）を利用して認証を行います。
-              %button.btn-default.btn-red{:type => "submit"} SMSを送信する
+              %button.btn-default.btn-red{type: "submit"} SMSを送信する
               %P.l-bottm 携帯番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
 
       = render 'devise/shared/registration-footer'
