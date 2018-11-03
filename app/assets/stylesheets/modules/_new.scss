@@ -53,6 +53,51 @@ select{
   line-height: 1.5;
   box-sizing: border-box;
 }
+a.form-question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+.sell-form-box{
+  float: right;
+  width: 400px;
+  .form-group{
+    .select-wrap{
+      margin-top: 8px;
+      background: #fff;
+      position: relative;
+      .select-default{
+        z-index: 2;
+        height: 48px;
+        width: 100%;
+        padding: 0 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+      }
+      .fa-angle-down{
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        z-index: 2;
+        color: #888;
+        font-size: 8px;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        font-size: 20px;
+      }
+    }
+  }
+}
 body{
   padding-bottom: 220px;
   header.single-header{
@@ -76,7 +121,7 @@ body{
       }
     }
   }
-  main{
+  main.single-main{
     section.l-single-container{
       width: 700px;
       margin: 0 auto;
@@ -148,121 +193,6 @@ body{
               }
             }
           }
-          .sell-content{
-            padding: 40px;
-            border-top: 1px solid #eee;
-            .form-group:first-child{
-              margin:0;
-            }
-            .form-group{
-              margin-top: 40px;
-              label{
-                font-weight: 600;
-                display: inline-block;
-                span.form-require{
-                  background: #ea352d;
-                  margin: 0 0 0 8px;
-                  padding: 2px 4px;
-                  border-radius: 2px;
-                  color: #fff;
-                  font-size: 12px;
-                  vertical-align: top;
-                }
-              }
-              .input-form{
-                input.input-default.item-name{
-                  margin-top: 8px;
-                  width: 100%;
-                }
-              }
-            }
-            .sell-form-box{
-              ul.sell-price{
-                list-style: none;
-                li.form-group{
-                  .clearfix{
-                    label.l-left{
-                      width: 50%;
-                      line-height: 48px;
-                      float: left;
-                    }
-                    #inputPrice.sell-price-input{
-                      float: right;
-                      display: inline-block;
-                      width: 50%;
-                      box-sizing: border-box;
-                      .sell-form-box-input{
-                        display: inline-block;
-                        width: 80%;
-                        margin-left: 5%;
-                        input.input-default.item-price{
-                          margin: 0;
-                          width: 100%;
-                          text-align: right;
-                        }
-                      }
-                    }
-                  }
-                }
-                li:first-child{
-                  padding: 0 0 24px;
-                  border: none;
-                }
-                li{
-                  padding: 24px 0;
-                  border-top: 1px solid #ccc;
-                }
-              }
-            }
-            h3.sell-sub-head{
-              color: #888;
-              float: left;
-              font-size: 14px;
-            }
-            .sell-form-box{
-              float: right;
-              width: 400px;
-              .select-wrap{
-                margin-top: 8px;
-                background: #fff;
-                position: relative;
-                select.select-default{
-                  z-index: 2;
-                  height: 48px;
-                  width: 100%;
-                  padding: 0 16px;
-                  border-radius: 4px;
-                  border: 1px solid #ccc;
-                  background: 0;
-                  font-size: 16px;
-                  line-height: 1.5;
-                  cursor: pointer;
-                }
-                i.fas.fa-angle-down{
-                  position: absolute;
-                  right: 16px;
-                  top: 50%;
-                  z-index: 2;
-                  color: #888;
-                  font-size: 8px;
-                  -webkit-transform: translate(0, -50%);
-                  transform: translate(0, -50%);
-                  font-size: 20px;
-                }
-              }
-            }
-            a.form-question{
-              display: inline-block;
-              width: 14px;
-              height: 14px;
-              border-radius: 50%;
-              background: #0099e8;
-              color: #fff;
-              line-height: 14px;
-              font-size: 12px;
-              text-align: center;
-            }
-          }
         }
         .sell-content.sell-btn-box{
           div{
@@ -283,5 +213,77 @@ body{
         }
       }
     }
+  }
+}
+.sell-content{
+  padding: 40px;
+  border-top: 1px solid #eee;
+  .form-group:first-child{
+    margin:0;
+  }
+  .form-group{
+    margin-top: 40px;
+    label{
+      font-weight: 600;
+      display: inline-block;
+      span.form-require{
+        background: #ea352d;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+    .input-form{
+      input.input-default.item-name{
+        margin-top: 8px;
+        width: 100%;
+      }
+    }
+  }
+  .sell-form-box{
+    ul.sell-price{
+      list-style: none;
+      li.form-group{
+        .clearfix{
+          label.l-left{
+            width: 50%;
+            line-height: 48px;
+            float: left;
+          }
+          #inputPrice.sell-price-input{
+            float: right;
+            display: inline-block;
+            width: 50%;
+            box-sizing: border-box;
+            .sell-form-box-input{
+              display: inline-block;
+              width: 80%;
+              margin-left: 5%;
+              input.input-default.item-price{
+                margin: 0;
+                width: 100%;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+      li:first-child{
+        padding: 0 0 24px;
+        border: none;
+      }
+      li{
+        padding: 24px 0;
+        border-top: 1px solid #ccc;
+      }
+    }
+  }
+  h3.sell-sub-head{
+    color: #888;
+    float: left;
+    font-size: 14px;
   }
 }
