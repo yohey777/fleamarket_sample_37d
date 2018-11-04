@@ -12,156 +12,152 @@ body {
     color: #333;
     line-height: 1;
     background: rgb(245, 245, 245);
-  }
-
-
-  .single-header h1 {
-    display: inline-block;
-    margin: 11px 0 12px;
-}
-
-.single-container {
-
-}
-  .single-header {
-    height: 128px;
-    text-align: center;
-    h1 {
-      margin: 40px 0 0;
-      a {
-        width: 185px;
-        height: 49px;
-        line-height: 49px;
+    .single-container {
+       .single-header {
+        height: 128px;
+        text-align: center;
+        h1 {
+          margin: 40px 0 0;
+          display: inline-block;
+          a {
+            width: 185px;
+            height: 49px;
+            line-height: 49px;
+          }
+        }
       }
-    }
-  }
-
-.login-no-account {
-  padding: 40px 64px;
-  p {
-    text-align: center;
-  }
-  a {
-      display: block;
-      margin: 8px 0 0;
-      border: 1px solid #0099e8;
-      background: #0099e8;
-      color: #fff;
-      line-height: 40px;
-      text-align: center;
-  }
-}
-
-
-
-
-.login-form-inner{
-    padding: 32px 64px;
-    border-top: 1px solid #eee;
-    .btn-sns-facebook{
-      background: #385185;
-      color: #fff;
-    }
-    .btn-sns-google{
-      margin: 16px 0 0;
-      background: #dc4e41;
-      color: #fff;
-    }
-    .btn-sns {
-      position: relative;
-    }
-    .field {
-      height: 48px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      background: #fff;
-      line-height: 1.5;
-      font-size: 16px;
-      width: 100%;
-      margin: 40px 0 0;
-    }
-}
-
-.btn-default {
-    display: block;
-    width: 100%;
-    line-height: 48px;
-    font-size: 14px;
-    border: 1px solid transparent;
-    -webkit-transition: all ease-out .3s;
-    transition: all ease-out .3s;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-.btn-red {
-    background: #ea352d;
-    border: 1px solid #ea352d;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.login-form-inner .form-group:first-child {
-  margin-top: -45px;
-}
-
-.login-form-inner .form-group:nth-child(2) {
-    margin-top: -13px;
-    margin-bottom: 20px;
-}
-
-.login-form-inner .input-default {
-    margin: 0;
-}
-
-.rc-anchor-light {
-    border: 1px solid #d3d3d3;
-    margin-top: 25px;
-}
-
-.single-footer {
-    width: 456px;
-    height: 140px;
-    margin: 0 auto;
-    background: #f5f5f5;
-    padding: 40px 0;
-    text-align: center;
-      li {
-        display: inline-block;
+      .single-main{
+        .login-panel {
+          max-width: none;
+          width: 456px;
+          margin: 0 auto;
+          background: #fff;
+          height: 100%;
+          a{
+            display:block;
+            margin:40px 0 40px ;
+           }
+           h2.l-single-head {
+            text-align: center;
+            padding: 32px 16px;
+            font-size: 22px;
+           }
+        }
+        .login-no-account {
+          padding: 40px 64px;
+          border-bottom: 1px solid #eee;
+          p {
+            text-align: center;
+          }
+          a {
+              display: block;
+              margin: 8px 0 0;
+              border: 1px solid #0099e8;
+              background: #0099e8;
+              color: #fff;
+              line-height: 40px;
+              text-align: center;
+          }
+        }
+        .login-form-inner {
+                margin: 32px 64px 10px 64px;
+            .form-group {
+                margin-top: 32px;
+                margin-bottom: 20px;
+            }
+            .btn-red {
+              background: #ea352d;
+              border: 1px solid #ea352d;
+              color: #fff;
+              margin-top: 20px;
+            }
+            .btn-sns-facebook{
+              background: #385185;
+              color: #fff;
+              position:ralative;
+              .fa-facebook{
+                  color: #FFF;
+                  background: #385185;
+                  font-size: 23px;
+                  position:absolute;
+                  left: 11px;
+                  top: 13px;
+              }
+            }
+            .btn-sns-google{
+              margin: 16px 0 0;
+              background: #dc4e41;
+              color: #fff;
+              position:ralative;
+              .fa-google-plus-g{
+                color: #fff;
+                background: #dc4e41;
+                font-size: 23px;
+                position:absolute;
+                left: 11px;
+                top: 13px;
+              }
+            }
+            .btn-default {
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                border: 1px solid transparent;
+                -webkit-transition: all ease-out .3s;
+                transition: all ease-out .3s;
+                cursor: pointer;
+                text-align: center;
+            }
+            .field {
+                width :440px;
+                height :60px;
+                 input {
+                  font-size:15px;
+                }
+            }
+            .btn-sns {
+              position: relative;
+            }
+            .field {
+              height: 48px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
+              width: 100%;
+              margin: 40px 0 0;
+            }
+        }
       }
-      a {
-        display: block;
-        color: #333;
-      }
-}
-.login-panel {
-    max-width: none;
-    width: 456px;
-    margin: 0 auto;
-    background: #fff;
-}
+          .single-footer {
+            width: 456px;
+            height: 140px;
+            margin: 0 auto;
+            background: #f5f5f5;
+            padding: 40px 0;
+            text-align: center;
+              li {
+                display: inline-block;
+              }
+              a {
+                display: block;
+                color: #333;
+              }
+              ul.clearfix {
+                  color: #fff;
+                  font-size: 14px;
+                  font-weight: 400;
+                  text-align: center;
+                  margin: 0 650px 50px 0;
+              }
+          }
+    }
+  }
 
-.login-panel a{
-  display:block;
-  margin:40px 0 0;
-}
 
-body footer nav ul {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0 630px 50px 0;
-}
 
-::placeholder {
-  font-size: 1.5em;
-  margin-left:10px;
+.form-group-grecap{
+     margin-top: 35px;
 }
-
-.field {
-  width :440px;
-  height :60px;
-}
-

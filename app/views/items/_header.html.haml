@@ -2,7 +2,7 @@
   .inner
     .clearfix
       %h1
-        %a
+        %a{href:"/"}
           %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?59913465"}
       %form.header-form.l-right
         %input.header-input{name: "keyword", placeholder: "キーワードから探す", type: "search", value: ""}
@@ -21,7 +21,7 @@
       .l-right
         %ul.user-nav
           %li
-            %a.user-nav__icon{href: ""}
+            %a.user-nav__icon{href: "/users/:id"}
               .user-nav__icon__mypage
                 %img{src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"}/
               .user-nav__icon__text マイページ
