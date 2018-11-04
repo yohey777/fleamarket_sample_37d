@@ -4,6 +4,7 @@
 @import './modules/index';
 @import './modules/subnav';
 @import './modules/mypage';
+
 @import './modules/login';
 @import './modules/method_of_payment';
 @import './modules/address_input';
@@ -11,6 +12,8 @@
 @import './modules/telephone-registration';
 @import './modules/registration';
 @import './modules/phone_auth';
+@import './modules/item-detail';
+@import './modules/signup';
+@import './modules/logout';
+@import './modules/new';
 
-// エラーが起こるのでコメントアウト状態で一旦放置
-// @import './modules/phone_authentication';

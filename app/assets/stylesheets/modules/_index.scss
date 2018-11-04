@@ -1,5 +1,6 @@
 .clearfix{
   @include clearfix;
+  list-style: none;
 }
 .smallpcDelete{
   margin-right: 5px;
@@ -11,6 +12,8 @@
 body {
   width: 100%;
   header {
+    z-index: 1001;
+    background-color: #fff;
     .inner {
       @include widepc{
         width: 1020px;
@@ -397,6 +400,7 @@ body {
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 24px;
+            color: #fff;
           }
           ul{
             li{

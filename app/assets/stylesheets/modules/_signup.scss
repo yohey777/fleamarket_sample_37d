@@ -27,21 +27,22 @@ body {
         }
       }
       .single-main{
-        .login-panel {
+        .l-single-container {
           max-width: none;
-          width: 456px;
+          width: 700px;
           margin: 0 auto;
           background: #fff;
           height: 100%;
           a{
             display:block;
-            margin:40px 0 40px ;
+            margin:40px 0 40px 0;
            }
-           h2.l-single-head {
-            text-align: center;
-            padding: 32px 16px;
-            font-size: 22px;
-           }
+        }
+        .l-single-head {
+          padding: 32px 16px;
+          font-size: 22px;
+          line-height: 1.5;
+          text-align: center;
         }
         .login-no-account {
           padding: 40px 64px;
@@ -59,11 +60,24 @@ body {
               text-align: center;
           }
         }
-        .login-form-inner {
-                margin: 32px 64px 10px 64px;
-            .form-group {
-                margin-top: 32px;
-                margin-bottom: 20px;
+        .l-single-inner {
+                padding: 30px 64px 40px 64px;
+                border-top: 1px solid #f5f5f5;
+                .l-single-content {
+                  max-width: 320px;
+                  margin: 0 auto;
+            .btn-mail {
+                position: relative;
+                background: #eee;
+                color: #000;
+                position:relative;
+                .fa-envelope{
+                  color: #ccc;
+                  font-size: 23px;
+                  position:absolute;
+                  left: 11px;
+                  top: 13px;
+                }
             }
             .btn-red {
               background: #ea352d;
@@ -108,6 +122,7 @@ body {
                 transition: all ease-out .3s;
                 cursor: pointer;
                 text-align: center;
+                margin-bottom: 20px;
             }
             .field {
                 width :440px;
@@ -131,6 +146,7 @@ body {
             }
         }
       }
+    }
           .single-footer {
             width: 456px;
             height: 140px;
@@ -158,6 +174,3 @@ body {
 
 
 
-.form-group-grecap{
-     margin-top: 35px;
-}
