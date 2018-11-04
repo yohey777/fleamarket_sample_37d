@@ -8,172 +8,349 @@
         %i.fa.fa-angle-right.icon
       %li
         %a
-          %span.active マイページ
-
+          %span.active
+            = @item.name
   %main
-    .mypage-container.clearfix
-      .mypage-container__content
-        %section.mypage-container__content-user-icon
-          %a{href: "https://www.mercari.com/jp/u/164528002/"}
-            %figure
-              %img{alt: "",  src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"}
-            %h2.bold りり
-            .mypage-number
-              .mypage-number-detail
-                評価
-                %span.bold 18
-              .mypage-number-detail
-                出品数
-                %span.bold 19
-        %section.mypage-container-news-todo.clearfix
-          %ul.mypage-tabs
-            %li.mypageList.active
-              %h3
-                %a お知らせ
-            %li.mypageList
-              %h3
-                %a やることリスト
-          .tab-contents
-            %ul#my-page-notification
-              %li.mypage-item-not-found.bold 現在、やることリストはありません
-
-        %section.mypage-container__tradings
-          %h2.mypage-container__tradings-head 購入した商品
-          %ul.mypage-container__tradings-tabs
-            %li.trading-now.trading-tabs.active
-              %a.bold{href:""} 取引中
-            %li.trading-after.trading-tabs
-              %a.bold{href:""} 過去の取引
-          .mypage-container__tradings-contents
-            %ul#trading-tab-list-now.tab-pane.active
-              %li.mypage-item-not-found.bold.active  取引中の商品がありません
-            %ul#trading-tab-list-after.tab-pane
-              %li.list-contents
-                %a{href:""}
-                  %figure
-                    %img{src:"https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m60440123002_1.jpg?1511831908"}
-                  .mypage-item-body
-                    .mypage-item-body__text
-                      「TIFFANY&amp;Co.  オープンハートネックレス」 を購入しました。
-                      %span 取引が完了しました
-                    .mypage-item-body__status.bold.done 取引完了
-                  %i.fa.fa-angle-right.icon
-              %li.list-contents
-                %a{href:''}
-                  %figure
-                    %img{src:"https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m60072518234_1.jpg?1502768232"}
-                  .mypage-item-body
-                    .mypage-item-body__text
-                      「ポパイ 3月号 POPEYE」 を購入しました。
-                      %span 取引が完了しました
-                    .mypage-item-body__status.bold.done 取引完了
-                  %i.fa.fa-angle-right.icon
-              %li#gotoAllList
-                %a#gotoAllList-inner{href: ""} 一覧を見る
-      .mypage-container__side
-        %nav.mypage-nav
-          %ul.mypage-nav-list
-            %li
-              %a.mypage-nav-list-item.active{href: "/jp/mypage/"}
-                マイページ
-                %i.fa.fa-angle-right.icon.active
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/notification/"}
-                お知らせ
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/todo/"}
-                やることリスト
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/like/history/"}
-                いいね！一覧
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/sell/"}
-                出品する
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/listings/listing/"}
-                出品した商品 - 出品中
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/listings/in_progress/"}
-                出品した商品 - 取引中
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/listings/completed/"}
-                出品した商品 - 売却済み
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/purchase/"}
-                購入した商品 - 取引中
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/purchased/"}
-                購入した商品 - 過去の取引
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/news/"}
-                ニュース一覧
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/review/history/"}
-                評価一覧
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/help_center/"}
-                ガイド
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/support/"}
-                お問い合わせ
-                %i.fa.fa-angle-right.icon
-
-          %h3.mypage-nav-head 売上・ポイント
-
-          %ul.mypage-nav-list
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/sales/"}
-                売上・振込申請
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/point/"}
-                ポイント
-                %i.fa.fa-angle-right.icon
-
-          %h3.mypage-nav-head 設定
-
-          %ul.mypage-nav-list
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/profile/"}
-                プロフィール
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/deliver_address/"}
-                住所変更
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/card/"}
-                支払い方法
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/email_password/"}
-                メール/パスワード
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/identification/"}
-                本人情報
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/mypage/sms_confirmation/"}
-                電話番号の確認
-                %i.fa.fa-angle-right.icon
-            %li
-              %a.mypage-nav-list-item{href: "/jp/logout/"}
-                ログアウト
-                %i.fa.fa-angle-right.icon
-
+    %section.item-box-container.l-single.container
+      %h1.item-name
+        = @item.name
+      .itemMainContent.clearfix
+        .item-photo
+          .owl-stage-outer
+            .owl-stage{style: "left: 0px; width: 1200px;"}
+              .owl-item.active
+                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_1.jpg?1540710290"}/
+              .owl-item
+                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_2.jpg?1540710290"}/
+              .owl-item
+                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}/
+              .owl-item
+                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_4.jpg?1540710290"}/
+          %ul.owl-dots.clearfix
+            %li.owl-dot.active
+              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_1.jpg?1540710290"}
+            %li.owl-dot
+              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_2.jpg?1540710290"}
+            %li.owl-dot
+              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}
+            %li.owl-dot
+              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}
+        %table.item-detail-table
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                %a{href: ""} Junko プロフ必読
+                %div.item-user-ratings
+                  .item-user-rating
+                    %i.fas.fa-grin.my-pink
+                    %span 484
+                  .item-user-rating
+                    %i.fas.fa-meh.icon.my-orange
+                    %span 12
+                  .item-user-rating
+                    %i.fas.fa-frown.icon.my-blue
+                    %span 1
+            %tr
+              %th カテゴリー
+              %td
+                %a{href: ""}
+                  = @item.L_category_id
+                %a{href: ""}
+                  .item-sub-category
+                    %i.fas.fa-angle-right.blue-icon
+                    = @item.M_category_id
+                %a{href: ""}
+                  .item-sub-category
+                    %i.fas.fa-angle-right.blue-icon
+                    = @item.S_category_id
+            %tr
+              %th ブランド
+              %td
+                %a{href: ""}
+                  =@item.brand_id
+            %tr
+              %th 商品の状態
+              %td
+                = @item.status
+            %tr
+              %th 配送料の負担
+              %td
+                = @item.expense
+            %tr
+              %th 配送の方法
+              %td
+                = @item.shipping_method
+            %tr
+              %th 配送元地域
+              %td
+                %a{href: ""}
+                  = @item.prefecture
+            %tr
+              %th 発送日の目安
+              %td
+                = @item.arrival_date
+      .item-price-box
+        %span.item-price.bold
+          = number_to_currency(@item.price, :unit => "￥", :precision => 0)
+        %span.item-tax (税込)
+        %span.item-shipping-fee 送料込み
+      %a.item-buy-btn.bold{"data-client" => "hidden", href: ""} 購入画面に進む
+      .item-description
+        %p.item-description-inner
+          = @item.description
+      .item-button-container.clearfix
+        .item-button-left
+          %button.item-button
+            %i.far.fa-heart
+            %span いいね!
+            %span.fade-in-down
+              = @item.like_count
+          %a.item-button{ href: ""}
+            %i.far.fa-flag
+            %span 不適切な商品の報告
+        .item-button-right
+          %a{href: ""}
+            %i.fas.fa-lock.my-rightblue
+            %span あんしん・あんぜんへの取り組み
+    .message-container
+      .message-content
+        %ul.message-items
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//static-mercari-jp-imgtr2.akamaized.net/thumb/members/692942750.jpg?1500432230"}
+                %figcaption.bold
+                  Sher♡︎
+            .message-body
+              .message-body-text こんばんは、こちらまえのポケット部分はマグネットですか？ボタンですか？
+              .message-icons.clearfix
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 1 日前
+                .message-icon-right
+                  %form{action: "https://www.mercari.com/jp/comment/report/m48659285686/1820552505/", method: "POST"}
+                    %button{type: "submit"}
+                      %i.far.fa-flag
+              %i.icon-balloon
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//static-mercari-jp-imgtr2.akamaized.net/thumb/members/532045948.jpg?1489417242"}
+                %figcaption.bold
+                  Junko プロフ必読
+              .message-is-seller 出品者
+            .message-body
+              .message-body-text ボタンです。ご検討よろしくお願いします。
+              .message-icons.clearfix
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 1 日前
+                .message-icon-right
+                  %form{action: "https://www.mercari.com/jp/comment/report/m48659285686/1820582815/", method: "POST"}
+                    %button{type: "submit"}
+                      %i.far.fa-flag
+                    %input{name: "redirect_url_key", type: "hidden", value: "item_detail"}/
+              %i.icon-balloon
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//static-mercari-jp-imgtr2.akamaized.net/thumb/members/692942750.jpg?1500432230"}/
+                %figcaption.bold
+                  Sher♡︎
+            .message-body
+              .message-body-text ありがとうございます
+              .message-icons.clearfix
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 1 日前
+                .message-icon-right
+                  %form{action: "https://www.mercari.com/jp/comment/report/m48659285686/1820612222/", method: "POST"}
+                    %button{type: "submit"}
+                      %i.far.fa-flag
+              %i.icon-balloon
+      .message-content
+        %form.message-form{action: "https://www.mercari.com/jp/comment/add/", method: "POST"}
+          %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %textarea.textarea-default{name: "body", type: "text", :value => ""}
+          %button.btn-gray{type: "submit"}
+            %span コメントする
+    %ul.nav-item-link-prev-next.clearfix
+      %li.nav-item-link-prev
+        %a{href: ""}
+          %i.fas.fa-angle-left
+          (未開封品、未使用)FANCL 化粧品セット　化粧液　乳液
+      %li.nav-item-link-next
+        %a{href: ""}
+          羊ファージャケット
+          %i.fas.fa-angle-right
+    .item-social-media
+      %ul.social-media-box
+        %li
+          %a.share-btn{"data-window-name": "facebook_window", href: "", target: "_blank"}
+            %i.fab.fa-facebook
+        %li
+          %a.share-btn{"data-window-name": "twitter_window", href: ""}
+            %i.fab.fa-twitter
+        %li
+          %a.share-btn{"data-window-name": "pinterest_window", href: "", target: "_blank"}
+            %i.fab.fa-pinterest
+    .items-in-user-profile
+      %section.items-box-container.clearfix
+        %h2.items-box-head
+          %a{href: ""} Junko プロフ必読さんのその他の出品
+        .items-box-content.clearfix
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "限定！新品未使用！コムデギャルソン CDG バンズ コラボ 26.5", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m13032107705_1.jpg?1540707695"}
+              .items-box-body
+                %h3.items-box-name.font-2 限定！新品未使用！コムデギャルソン CDG バンズ コラボ 26.5
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,500
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 10
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "限定！新品未使用！コムデギャルソン CDG バンズ コラボ 24.5", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m12805614611_1.jpg?1540707587"}
+              .items-box-body
+                %h3.items-box-name.font-2 限定！新品未使用！コムデギャルソン CDG バンズ コラボ 24.5
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 8
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded.is-higher-height{alt: "新品未使用！supreme leopard half zip  M", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m66548227427_1.jpg?1540709423"}
+              .items-box-body
+                %h3.items-box-name.font-2 新品未使用！supreme leopard half zip  M
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 32,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 7
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "新品未使用！supreme leopard half zip    XL",src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m50803700434_1.jpg?1540709330"}
+              .items-box-body
+                %h3.items-box-name.font-2 新品未使用！supreme leopard half zip    XL
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 32,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 5
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "新品未使用！シュプリーム  ドラゴンシャツ ブラック Lサイズ", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11395319580_1.jpg?1540709702"}
+              .items-box-body
+                %h3.items-box-name.font-2 新品未使用！シュプリーム  ドラゴンシャツ ブラック Lサイズ
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 28,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 10
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "新品未使用！シュプリーム  ロゴサイドライン ロングジャケット S",src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m93919590685_1.jpg?1540710040"}
+              .items-box-body
+                %h3.items-box-name.font-2 新品未使用！シュプリーム  ロゴサイドライン ロングジャケット S
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 48,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 5
+                  %p.item-box-tax (税込)
+      %section.items-box-container.clearfix.items-box-overflow
+        %h2.items-box-head
+          %a{href: ""}
+            シュプリームのその他 その他の商品
+        .items-box-content.clearfix
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "値下げしました！18SS Supreme Hair Bobbles ヘアゴム", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m32922583657_1.jpg?1537334233"}
+              .items-box-body
+                %h3.items-box-name.font-2 値下げしました！18SS Supreme Hair Bobbles ヘアゴム
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 9,500
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 24
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt:  "ステッカー シュプリーム きっこうちゃん ストーンアイランド ナイキ" ,src:"https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m87522914051_1.jpg?1540914804"}
+              .items-box-body
+                %h3.items-box-name.font-2 ステッカー シュプリーム きっこうちゃん ストーンアイランド ナイキ
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 6,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "Supreme The Killer ステッカー", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m85798390748_1.jpg?1540702158"}
+              .items-box-body
+                %h3.items-box-name.font-2 Supreme The Killer ステッカー
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 1,700
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "Supreme", src:"https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m62777367999_1.jpg?1540955991"}
+              .items-box-body
+                %h3.items-box-name.font-2 Supreme
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 99,999
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "新品  Supreme catcher's mask キャッチャーマスク", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m34699805290_1.jpg?1540954455"}
+                %figcaption
+                  .item-sold-out-badge
+                    %div SOLD
+              .items-box-body
+                %h3.items-box-name.font-2 新品  Supreme catcher's mask キャッチャーマスク
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 12,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 6
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "Supreme iPhone ケース 8/7 シュプリーム iPhone 8", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m20932996268_1.jpg?1540953333"}
+              .items-box-body
+                %h3.items-box-name.font-2 Supreme iPhone ケース 8/7 シュプリーム iPhone 8
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                %p.item-box-tax (税込)
   = render 'items/appbarner'
   = render 'items/footer'
-  = render 'items/sellBtn'

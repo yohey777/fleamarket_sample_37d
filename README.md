@@ -119,7 +119,7 @@ https://gyazo.com/c6ce7c1d33a5cd2bf005277a2c99bd50
 |------|----|-------|
 |name|string|null: false, add_index|
 |price|integer|null: false|
-|description|text|null: false, add_index|
+|description|text|null: false|
 |status|integer|null: false|
 |prefecuture|integer|null: false|
 |expense|integer|null: false|
