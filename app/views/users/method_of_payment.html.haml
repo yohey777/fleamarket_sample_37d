@@ -40,6 +40,7 @@
               %span.form-require 必須
               %input.input-default{name: "detail-address", placeholder: "カードの背面もしくは３桁の番号", type: "text", value: ""}/
             .form-group-registration
-              %button.btn-default.btn-red{type: "submit"} 次へ進む
+              %a{:href => "/users/sign_up/6"}
+                %button.btn-default.btn-red{type: "submit"} 次へ進む
 
       = render 'devise/shared/registration-footer'
