@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true, length: { maximum: 6 }
+  has_one :address, dependent: :destroy
 
 end
