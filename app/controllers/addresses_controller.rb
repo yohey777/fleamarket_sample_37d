@@ -11,7 +11,7 @@ class AddressesController < ApplicationController
     @address = Address.new(address_params)
       if @address.save
         redirect_to users_sign_up_5_path
-          else
+      else
         render 'new'
       end
   end
