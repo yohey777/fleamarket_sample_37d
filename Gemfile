@@ -77,3 +77,5 @@ gem 'factory_girl_rails', "~> 4.4.1"
 gem 'mini_magick'
 gem 'dropzonejs-rails'
 gem 'carrierwave', '~> 1.0'
+gem 'mechanize'
+gem 'nokogiri'
