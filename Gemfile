@@ -74,3 +74,5 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'factory_girl_rails', "~> 4.4.1"
+gem 'mechanize'
+gem 'nokogiri'
