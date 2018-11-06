@@ -8,7 +8,7 @@
       #sell-container
         .sell-container-inner
           %h2.l-single-head 商品の情報を入力
-          %form.sell-form
+          = form_for @item, html: {class:'dropzone', id: "item-dropzone"} do |f|
             .sell-upload-box
               %h3.sell-upload-head
                 出品画像
@@ -18,71 +18,59 @@
                 .sell-upload-items
                   %ul
                 .sell-upload-drop-box
-                  %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display: none;", type: "file"}
+                  .fallback
+                    = f.file_field :image_url
+                    = f.submit 'upload the image'
                   %pre.visible-pc
                     :preserve
                       ドラッグアンドドロップ
-                      またはクリックしてファイルをアップロード
+                        またはクリックしてファイルをアップロード
             .sell-content
               .form-group
-                %label
-                  商品名
-                  %span.form-require 必須
-                .input-form
-                  %input.item-name.input-default{placeholder: "商品名（必須 40文字まで)", value: ""}
+                = f.label :name, "商品名", class: "itemTitleLabel"
+                %span.form-require 必須
+                = f.text_field :name, placeholder: "商品名（必須 40文字まで）", value:"", class: "input-default"
               .form-group
-                %label
-                  商品の説明
-                  %span.form-require 必須
-                %textarea.textarea-default{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"}
+                = f.label :description, "商品の説明", class: "itemTitleLabel"
+                %span.form-require 必須
+                = f.text_area :name, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5", value:"", class: "textarea-default"
             .sell-content.clearfix
               %h3.sell-sub-head 商品の詳細
               .sell-form-box
                 .form-group
-                  %label
-                    カテゴリー
-                    %span.form-require 必須
+                  = f.label :L_category_id, "カテゴリー", class: "itemTitleLabel"
+                  %span.form-require 必須
                   .select-wrap
-                    =form_for @item do |f|
-                      =f.select :L_category_id, Item.L_category_ids.keys.to_a, { prompt: '----'}, {class: "select-default"}
-                      = fa_icon 'angle-down', class: 'fa-angle-down'
-                    %i.fas.fa-angle-down
+                    =f.select :L_category_id, Item.L_category_ids.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
                 .form-group
-                  %label
-                    商品の状態
-                    %span.form-require 必須
+                  = f.label :status, "商品の状態", class: "itemTitleLabel"
+                  %span.form-require 必須
                   .select-wrap
-                    =form_for @item do |f|
-                      =f.select :status, Item.statuses.keys.to_a, { prompt: '----'}, {class: "select-default"}
-                      = fa_icon 'angle-down', class: 'fa-angle-down'
+                    =f.select :status, Item.statuses.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
             .sell-content.clearfix
               %h3.sell-sub-head 配送について
               %a.form-question{href: "", target: "_blank"}?
               .sell-form-box
                 .form-group
-                  %label
-                    配送料の負担
-                    %span.form-require 必須
+                  = f.label :shipping_method, "配送料の負担", class: "itemTitleLabel"
+                  %span.form-require 必須
                   .select-wrap
-                    =form_for @item do |f|
-                      =f.select :expense, Item.expenses.keys.to_a, { prompt: '----'}, {class: "select-default"}
-                      = fa_icon 'angle-down', class: 'fa-angle-down'
+                    =f.select :expense, Item.expenses.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
                 .form-group
-                  %label
-                    発送元の地域
-                    %span.form-require 必須
+                  = f.label :prefecture, "発送元の地域", class: "itemTitleLabel"
+                  %span.form-require 必須
                   .select-wrap
-                    =form_for @item do |f|
-                      =f.select :prefecture, Item.prefectures.keys.to_a, { prompt: '----'}, {class: "select-default"}
-                      = fa_icon 'angle-down', class: 'fa-angle-down'
+                    =f.select :prefecture, Item.prefectures.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
                 .form-group
-                  %label
-                    発送までの日数
-                    %span.form-require 必須
+                  = f.label :arrival_date, "発送までの日数", class: "itemTitleLabel"
+                  %span.form-require 必須
                   .select-wrap
-                    =form_for @item do |f|
-                      =f.select :arrival_date, Item.arrival_dates.keys.to_a, { prompt: '----'}, {class: "select-default"}
-                      = fa_icon 'angle-down', class: 'fa-angle-down'
+                    =f.select :arrival_date, Item.arrival_dates.keys.to_a, { prompt: '----'}, {class: "select-default"}
+                    = fa_icon 'angle-down', class: 'fa-angle-down'
             .sell-content.clearfix
               %h3.sell-sub-head 販売価格(300〜9,999,999)
               %a.form-question{href: "", target: "_blank"} ?
@@ -90,13 +78,12 @@
                 %ul.sell-price
                   %li.form-group
                     .clearfix
-                      %label.l-left
-                        価格
-                        %span.form-require 必須
+                      = f.label :price, "価格", class: "itemTitleLabel"
+                      %span.form-require 必須
                       #inputPrice.l-right.sell-price-input
                         ¥
                         .sell-form-box-input
-                          %input.item-price.input-default{placeholder: "例）300", value: ""}
+                          = f.text_field :price, placeholder: "例）300", value:"", class: "input-default"
                   %li.clearfix
                     .l-left
                       販売手数料 (10%)
@@ -119,6 +106,6 @@
                   また、出品をもちまして
                   %a{href: ""} 加盟店規約
                   に同意したことになります。
-              %button.btn-default.btn-red{type: "submit"}
-                出品する
-              %a.btn-default.btn-gray もどる
+              = f.submit'出品する', class: "btn-default btn-red"
+              %a.btn-default.btn-gray{:onclick => "history.back()", :type => "button"}  もどる
+

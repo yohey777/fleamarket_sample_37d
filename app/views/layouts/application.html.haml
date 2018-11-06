@@ -1,10 +1,11 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.4.1/css/all.css", :integrity => "sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz", :rel => "stylesheet"}/
-    %link{:href => "//www-mercari-jp.akamaized.net/favicon-16x16.png?2744474374", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %link{crossorigin: "anonymous", href: "https://use.fontawesome.com/releases/v5.4.1/css/all.css", integrity: "sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz", rel: "stylesheet"}/
+    %link{href: "//www-mercari-jp.akamaized.net/favicon-16x16.png?2744474374", rel: "icon", sizes: "16x16", type: "image/png"}/
     %script{src: "main.js"}
+    %script{src: "jquery.js"}
     %title FleamarketSample37d
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
