@@ -1,10 +1,10 @@
 class Item < ApplicationRecord
 
-  belongs_to :L_category
-  belongs_to :M_category
-  belongs_to :S_category
-  belongs_to :size
-  belongs_to :brand
+  belongs_to :L_category, optional: true
+  belongs_to :M_category, optional: true
+  belongs_to :S_category, optional: true
+  belongs_to :size, optional: true
+  belongs_to :brand, optional: true
   has_many :images, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -12,6 +12,8 @@ class Item < ApplicationRecord
   has_many :seller_deals, class_name: 'Deal', foreign_key: :seller_id, dependent: :destroy
   has_many :seller, class_name: 'User', foreign_key: :seller_id, through: :deals
   has_many :buyer, class_name: 'User', foreign_key: :buyer_id, through: :deals
+  # ファイルアップロード
+  mount_uploader :image, ImageUploader
 
   enum status: {
     新品、未使用:1, 未使用に近い:2, 目立った傷や汚れなし:3, やや傷や汚れあり:4, 傷や汚れあり:5, 全体的に状態が悪い:6
@@ -31,16 +33,16 @@ class Item < ApplicationRecord
   enum brand_id:{
     シュプリーム:1
   }
+  enum size_id:{
+    XS以下:1, S:2, M:3, L:4, XL:5, XL以上:6, FREE_SIZE:7
+  }
   enum L_category_id:{
     レディース:1, メンズ:2, ベビー・キッズ:3, インテリア・住まい・小物:4, 本・音楽・ゲーム:5, おもちゃ・ホビー・グッズ:6, コスメ・香水・美容:7, 家電・スマホ・カメラ:8, スポーツ・レジャー:9, ハンドメイド:10, チケット:11, 自転車・オートバイ:12
   }
   enum M_category_id:{
-    アクセサリー:1
+    アクセサリー:1, トップス:2, ジャケット・アウター:3, パンツ:4, スカート:5, ワンピース:6, 靴:7, ルームウェア・パジャマ:8, レッグウェア:9, 帽子:10, バッグ:11, アクセサリー:12, ヘアアクセサリー:13, 小物:14, 時計:15, ウィッグ・エクステ:16, 浴衣・水着:17, スーツ・フォーマル・ドレス:18, マタニティ:19
   }
   enum S_category_id:{
     その他:1
-  }
-  enum size_id:{
-
   }
 end

@@ -1,0 +1,23 @@
+button#footer--sell-btn{
+  height: 160px;
+  width: 160px;
+  background-color: #ea352d;
+  border-radius: 80px;
+  z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  div{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+  }
+  i.fa-camera{
+    font-size: 59px;
+    color: #fff;
+    margin: 8px auto;
+    text-align: center;
+    display: inline-block;
+  }
+}
