@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      address: 住所
+    attributes:
+      address:
+        first_name_kana: お名前カナ
+        last_name_kana: お名前カナ
+        postal_code: 郵便番号
+        telephone_number: 電話番号

@@ -1,20 +1,63 @@
 %body
   .single-container
-    = render 'devise/registration-header'
+    .single-header
+      %h1
+        %a{href: "https://www.mercari.com/jp/"}
+          %img{alt:"mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1098098883"}/
+      %nav.progress-bar.signup-bar
+        %ol.clearfix
+          %li.active
+            会員情報
+            .progress-status-fist
+          %li
+            電話番号認証
+            .progress-status
+          %li
+            住所入力
+            .progress-status
+          %li
+            支払い方法
+            .progress-status
+          %li
+            完了
+            .progress-status-last
     .single-main
       .l-single-container
-        %h2.l-single-head 新規会員登録
+        %h2.l-single-head 会員情報入力
         .l-single-inner
           .l-single-content
-            %a.btn-default.btn-mail{href: "https://www.mercari.com/jp/signup/registration/"}
-              %i.far.fa-envelope
-              メールアドレスで登録
-            %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-              %i.fab.fa-facebook
-              Facebookで登録
-            %button#google-login.btn-default.btn-sns.btn-sns-google
-              %i.fab.fa-google-plus-g
-              Googleで登録
-            .login-form-inner
-              .form-group
-      = render 'devise/registration-footer'
+            = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+              = devise_error_messages!
+              .form-group-registration
+                = f.label :ニックネーム
+                %em (6文字以内)
+                %span.form-require 必須
+                %br/
+                = f.text_field :nickname, autofocus: true, maxlength: "6",class:'input-default', placeholder: "例) メルカリ太郎"
+              .form-group-registration
+                = f.label :メールアドレス
+                %span.form-require 必須
+                %br/
+                = f.email_field :email,class:'input-default', placeholder: "PC・携帯どちらでも可"
+              .form-group-registration
+                = f.label :パスワード
+                %span.form-require 必須
+                - if @validatable
+                  %em
+                    (#{@minimum_password_length} characters minimum)
+                %br/
+                = f.password_field :password, autocomplete: "off",class:'input-default', placeholder: "６文字以上"
+              .form-group-registration
+                = f.label :パスワード（確認）
+                %span.form-require 必須
+                %br/
+                = f.password_field :password_confirmation, autocomplete: "off",class:'input-default', placeholder: "６文字以上"
+              .form-group-registration-recapcha
+                .g-recaptcha.signup-recaptcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+                  %div{style: "width: 304px; height: 78px;"}
+                    %div
+                      %iframe{frameborder: "0", height: "78", name: "a-okxj1mv1r4m3", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1540189908068&size=normal&cb=fi29npi8pfvn", width: "304"}
+                    %textarea#g-recaptcha-response.g-recaptcha-response{name: "g-recaptcha-response", style: "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
+              %button.btn-default.btn-red{type: "submit"}
+                = f.submit "次へ進むaaa",class:'signup_btn'
+      = render 'devise/shared/registration-footer'
