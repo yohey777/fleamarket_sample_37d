@@ -104,6 +104,24 @@ a.form-question{
     background: white;
     padding: 0;
 }
+span.form-require{
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+span.form-arbitrary{
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+  background: #ccc;
+}
 body{
   padding-bottom: 220px;
   header.single-header{
@@ -147,15 +165,6 @@ body{
             padding: 40px;
             h3.sell-upload-head{
               font-size: 16px;
-              span.form-require{
-                background: #ea352d;
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-              }
             }
             p{
               margin: 8px 0 0;
@@ -293,6 +302,12 @@ body{
       li{
         padding: 24px 0;
         border-top: 1px solid #ccc;
+        .profitFee.l-left{
+          font-size: 16px;
+        }
+        #profitFee.l-right{
+          font-size: 32px;
+        }
       }
     }
   }
