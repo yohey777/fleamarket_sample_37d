@@ -447,31 +447,6 @@ body {
       }
     }
   }
-  #footer--sell-btn{
-    height: 160px;
-    width: 160px;
-    background-color: #ea352d;
-    border-radius: 80px;
-    z-index: 1000;
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    div{
-      padding-top: 32px;
-      color: #fff;
-      font-size: 22px;
-      font-weight: 400;
-      text-align: center;
-    }
-    .fa-camera{
-      font-size: 59px;
-      color: #fff;
-      margin: 8px auto;
-      padding: 0 50px;
-      text-align: center;
-      display: inline-block;
-    }
-  }
 }
 
 @media (min-width: 1061px){
