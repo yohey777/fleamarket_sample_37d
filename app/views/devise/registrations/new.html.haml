@@ -53,11 +53,6 @@
                 %br/
                 = f.password_field :password_confirmation, autocomplete: "off",class:'input-default', placeholder: "６文字以上"
               .form-group-registration-recapcha
-                .g-recaptcha.signup-recaptcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
-                  %div{style: "width: 304px; height: 78px;"}
-                    %div
-                      %iframe{frameborder: "0", height: "78", name: "a-okxj1mv1r4m3", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1540189908068&size=normal&cb=fi29npi8pfvn", width: "304"}
-                    %textarea#g-recaptcha-response.g-recaptcha-response{name: "g-recaptcha-response", style: "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
-              %button.btn-default.btn-red{type: "submit"}
-                = f.submit "次へ進むaaa",class:'signup_btn'
+                .g-recaptcha{"data-callback" => "validateRecaptcha", "data-sitekey" => "RECAPTCHA_SITE_KEY "}
+              = f.submit "ログイン", class: "signup_btn btn-default btn-red", disabled: "disabled"
       = render 'devise/shared/registration-footer'
