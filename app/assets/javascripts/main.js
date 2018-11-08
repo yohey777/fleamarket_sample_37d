@@ -28,3 +28,50 @@ $(function(){
     e.preventDefault();
   });
 });
+
+//手数料の自動計算
+$(function(){
+  // ボタンを入力した時の処理
+  $('#item_price').keyup( function(e) {
+    // 入力フォームの値を取得
+    var item_price_value = $("#item_price").val();
+
+    //入力フォームのvalue属性値を変更
+    $('#item_price').attr({
+      'value': item_price_value
+    });
+    //文字列を数値に変換
+    item_price = parseInt(item_price_value);
+    if (item_price >= 300 && item_price <= 9999999){
+      // 手数料10%を小数点繰り下げで計算
+      var handling_charge = Math.floor(item_price * 0.1);
+      $("#handling_charge.l-right").html("¥" + handling_charge);
+      var profit_fee =item_price - handling_charge;
+      // 計算結果を別の入力フォームに表示
+      $("#profitFee.l-right").html("¥" + profit_fee);
+    } else {
+      $("#handling_charge.l-right").html("-");
+      $("#profitFee.l-right").html("-");
+    }
+    e.preventDefault();
+  });
+});
+// ドロッグアンドドロップ
+Dropzone.autoDiscover = false;
+var headlineDropzone = new Dropzone("#upload-dropzone", {
+  url: "/upload_photo", // You can override url of form in here.
+  maxFilesize: 5, // in MB
+  parallelUploads: 2,
+  acceptedFiles:'.jpg, .png, .jpeg, .gif', // type of files
+  init: function(){
+    this.on('addedfile', function(file) {
+      // Called when a file is added to the list.
+    });
+    this.on('sending', function(file, xhr, formData) {
+      // Called just before each file is sent.
+    });
+    this.on('success', function(file, json) {
+      // Called when file uploaded successfully.
+    });
+  }
+});

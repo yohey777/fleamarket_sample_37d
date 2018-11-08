@@ -74,11 +74,16 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'factory_girl_rails', "~> 4.4.1"
+gem 'rails-i18n'
+
+gem 'jp_prefecture'
+gem 'simple_form'  #formをすっきり書けます
+gem 'payjp'
 gem 'mini_magick'
-gem 'dropzonejs-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'mechanize'
 gem 'nokogiri'
+
 gem 'payjp'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'dotenv-rails'
