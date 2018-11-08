@@ -27,18 +27,10 @@
         .l-single-inner
           .l-single-content
             .form-group-registration
-              %label{for: "fullname"} カード番号
-              %span.form-require 必須
-              %input.input-default{name: "kanji-first-name", placeholder: "例）半角英数のみ", type: "string", value: ""}/
-            .form-group-registration
-              %label{for: "date"} 有効期限
-              %span.form-require 必須
-              = render 'expiration_date'
-              = render 'expiration_year'
-            .form-group-registration
-              %label{for: "detail-address"} セキュリティコード
-              %span.form-require 必須
-              %input.input-default{name: "detail-address", placeholder: "カードの背面もしくは３桁の番号", type: "text", value: ""}/
+              %form#charge-form{:action => "/pay", :method => "POST"}
+                %span.charge-errors
+              = form_tag(action: :payment, method: :post) do
+                %script.payjp-button{"data-key" => PAYJP_PUBLIC_KEY, :src => "https://checkout.pay.jp", :type => "text/javascript","data-text" => "クレジットカードの登録をする"}
             .form-group-registration
               %a{:href => "/users/sign_up/6"}
                 %button.btn-default.btn-red{type: "submit"} 次へ進む

@@ -1,3 +1,37 @@
-登録が完了しました。
+%body
+  .single-container
+    .single-header
+      %h1
+        %a{href: "https://www.mercari.com/jp/"}
+          %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1098098883"}/
+      %nav.progress-bar.signup-bar
+        %ol.clearfix
+          %li
+            会員情報
+            .paycomplete-progress-status-fist
+          %li
+            電話番号認証
+            .paycomplete-progress-status-2nd
+          %li
+            住所入力
+            .paycomplete-progress-status-3rd
+          %li
+            支払い方法
+            .paycomplete-progress-status-4th
+          %li.active
+            完了
+            .paycomplete-progress-status-last
+    .single-main
+      .l-single-container
+        %h2.l-single-head 登録完了
+        .l-single-inner
+          .l-single-content
+            .form-group-registration
+              %form#charge-form{:action => "/pay", :method => "POST"}
+                %span.charge-errors
+            .form-group-registration
+              %a{:href => "/"}
+                %button.btn-default.btn-red{type: "submit"} トップページに戻る
 
-%a{:href => "/"} トップに戻る
+      = render 'devise/shared/registration-footer'
+
