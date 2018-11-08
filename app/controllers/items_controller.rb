@@ -29,4 +29,18 @@ class ItemsController < ApplicationController
   def create_params
     params.require(:item).permit(:name, :price, :description, :status, :prefecture, :expense, :shipping_method, :arrival_date, :like_count, :L_category_id, :M_category_id, :S_category_id, :size_id, :brand_id)
   end
+
+  def method_of_payment
+
+  end
+
+
+  def payment
+    require 'payjp'
+    # Payjp.api_key = 'sk_test_c62fade9d045b54cd76d7036'
+     Payjp.api_key = PAYJP_SECRET_KEY
+    Payjp::Charge.create(currency: 'jpy', amount: 1000, card: params['payjp-token'])
+    redirect_to method_of_payment_items_path, notice: "支払いが完了しました"
+  end
+
 end
