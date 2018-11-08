@@ -80,7 +80,6 @@ gem 'jp_prefecture'
 gem 'simple_form'  #formをすっきり書けます
 gem 'payjp'
 gem 'mini_magick'
-gem 'dropzonejs-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'mechanize'
 gem 'nokogiri'
