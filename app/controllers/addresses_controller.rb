@@ -10,9 +10,10 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
       if @address.save
-        redirect_to users_sign_up_6_path
+        redirect_to method_of_payment_items_path
       end
   end
+
 
   private
   def address_params
