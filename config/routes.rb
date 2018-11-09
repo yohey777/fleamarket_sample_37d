@@ -8,11 +8,12 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :items do
     collection do
+      get 'buy'
+    end
+    collection do
       get 'method_of_payment'
       post 'payment'
     end
-
-    post 'images' => 'images#create'
   end
 
   get   'address/new' => 'addresses#new'
@@ -27,6 +28,5 @@ Rails.application.routes.draw do
   get   'users/sign_up/3'  =>  'users#phone_authentication'
   get   'users/sign_up/5'   =>  'users#method_of_payment'
   get   'users/sign_up/6'   =>  'users#registration_completion'
-
 
 end

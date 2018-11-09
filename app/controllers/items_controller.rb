@@ -25,6 +25,10 @@ class ItemsController < ApplicationController
 
   end
 
+  def buy
+
+  end
+
   private
 
   def create_params
