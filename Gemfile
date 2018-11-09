@@ -41,7 +41,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem 'factory_girl_rails'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -72,8 +72,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'rspec-rails'
-gem 'factory_girl_rails', "~> 4.4.1"
 gem 'rails-i18n'
 
 gem 'jp_prefecture'
