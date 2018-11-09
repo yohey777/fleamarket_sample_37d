@@ -1,8 +1,5 @@
 %body
-  %header.single-header
-    %h1
-      %a{href: "/"}
-        %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?582886128"}
+  = render 'single-header'
   %main.single-main
     %section.l-single-container.buy-item-container
       #sell-container
@@ -133,4 +130,4 @@
               = f.hidden_field :like_count, value:0
               = f.submit'出品する', class: "btn-default btn-red"
               %a.btn-default.btn-gray{:onclick => "history.back()", :type => "button"}  もどる
-
+  = render 'devise/shared/registration-footer'
