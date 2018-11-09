@@ -1,0 +1,22 @@
+.single-footer {
+  width: 456px;
+  height: 140px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      color: #333;
+    }
+    ul.clearfix {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 650px 50px 0;
+    }
+}

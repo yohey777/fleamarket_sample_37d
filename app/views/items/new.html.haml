@@ -1,8 +1,5 @@
 %body
-  %header.single-header
-    %h1
-      %a{href: "/"}
-        %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?582886128"}
+  = render 'single-header'
   %main.single-main
     %section.l-single-container.buy-item-container
       #sell-container
@@ -16,11 +13,15 @@
               %p 最大4枚までアップロードできます
               .sell-dropbox-container.clearfix
                 .sell-upload-items
-                  %ul
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
                 .sell-upload-drop-box
-                  .fallback
-                    = f.file_field :image_url
-                    = f.submit 'upload the image'
                   %pre.visible-pc
                     :preserve
                       ドラッグアンドドロップ
@@ -133,4 +134,4 @@
               = f.hidden_field :like_count, value:0
               = f.submit'出品する', class: "btn-default btn-red"
               %a.btn-default.btn-gray{:onclick => "history.back()", :type => "button"}  もどる
-
+  = render 'devise/shared/registration-footer'
