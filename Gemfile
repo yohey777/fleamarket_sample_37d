@@ -84,3 +84,6 @@ gem 'carrierwave', '~> 1.0'
 gem 'mechanize'
 gem 'nokogiri'
 
+gem 'payjp'
+gem "recaptcha", require: "recaptcha/rails"
+gem 'dotenv-rails'
