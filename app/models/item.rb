@@ -14,6 +14,11 @@ class Item < ApplicationRecord
   has_many :buyer, class_name: 'User', foreign_key: :buyer_id, through: :deals
   # ファイルアップロード
   accepts_nested_attributes_for :images
+  # バリデーション
+  validates :name, presence: true, length: { maximum: 40}
+  validates :description, presence: true, length: { maximum: 1000 }
+  validates :price, presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
+  validates :status,:L_category_id, :M_category_id,:expense,:shipping_method,:arrival_date,:shipping_method,presence: true
 
   enum status: {
     新品、未使用:1, 未使用に近い:2, 目立った傷や汚れなし:3, やや傷や汚れあり:4, 傷や汚れあり:5, 全体的に状態が悪い:6
