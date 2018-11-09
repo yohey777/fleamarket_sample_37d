@@ -13,11 +13,15 @@
               %p 最大4枚までアップロードできます
               .sell-dropbox-container.clearfix
                 .sell-upload-items
-                  %ul
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
+                  = f.fields_for :images do |i|
+                    = i.file_field :image_url
                 .sell-upload-drop-box
-                  .fallback
-                    = f.file_field :image_url
-                    = f.submit 'upload the image'
                   %pre.visible-pc
                     :preserve
                       ドラッグアンドドロップ
