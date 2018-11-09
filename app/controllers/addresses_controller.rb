@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
 
+  before_action :set_user
+
   def index
   end
 
@@ -14,6 +16,10 @@ class AddressesController < ApplicationController
       else
         render 'new'
       end
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 
 
