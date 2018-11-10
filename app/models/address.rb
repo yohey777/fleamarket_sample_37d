@@ -14,7 +14,7 @@ class Address < ApplicationRecord
   jp_prefecture :prefecture_code
 
  def prefecture_name
-    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+    JpPrefecture::Prefecture.find(code: prefecture_code)&.to_s
   end
 
   def prefecture_name=(prefecture_name)
