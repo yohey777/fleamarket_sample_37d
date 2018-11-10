@@ -4,7 +4,7 @@ $(function () {
             '#address_postal_code'
         ],
         address : {
-            '#address_prefecture' : '%3',
+            '#address_prefecture_code' : '%3',
             '#address_city' : '%4%5'
         }
     });

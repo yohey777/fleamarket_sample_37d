@@ -2,16 +2,13 @@
   .single-container
     .single-header
       %h1
-        %a{href: "https://www.mercari.com/jp/"}
+        %a{href: "/"}
           %img{alt:"mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1098098883"}/
       %nav.progress-bar.signup-bar
         %ol.clearfix
           %li.active
             会員情報
             .progress-status-fist
-          %li
-            電話番号認証
-            .progress-status
           %li
             住所入力
             .progress-status
@@ -53,6 +50,7 @@
                 %br/
                 = f.password_field :password_confirmation, autocomplete: "off",class:'input-default', placeholder: "６文字以上"
               .form-group-registration-recapcha
-                .g-recaptcha{"data-callback" => "validateRecaptcha", "data-sitekey" => "RECAPTCHA_SITE_KEY "}
-              = f.submit "ログイン", class: "signup_btn btn-default btn-red", disabled: "disabled"
+                / .g-recaptcha{"data-callback" => "validateRecaptcha", "data-sitekey" => "RECAPTCHA_SITE_KEY "}
+              = f.submit "次へ進む", class: "signup_btn btn-default btn-red"
+              / = f.submit "ログイン", class: "signup_btn btn-default btn-red", disabled: "disabled"
       = render 'devise/shared/registration-footer'
