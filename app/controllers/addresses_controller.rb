@@ -31,7 +31,7 @@ class AddressesController < ApplicationController
       :first_name_kana,
       :last_name_kana,
       :postal_code,
-      :prefecture,
+      :prefecture_code,
       :city,
       :street_number,
       :building_name,

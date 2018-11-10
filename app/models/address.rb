@@ -10,4 +10,16 @@ class Address < ApplicationRecord
    VALID_PHONE_REGEX = /\A\d{10}$|^\d{11}\z/
    validates :telephone_number, presence: true, format: { with: VALID_PHONE_REGEX , message: 'は10桁もしくは11桁の番号を入力してください'}
 
+  include JpPrefecture
+  jp_prefecture :prefecture_code
+
+ def prefecture_name
+    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+  end
+
+  def prefecture_name=(prefecture_name)
+    self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
+  end
+
+
 end
