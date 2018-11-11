@@ -32,9 +32,8 @@
           245 203号室
           %br/
           山田 花子
-        %a.buy-user-info-fix{href: ""}
-          %span 変更する
-          %i.fas.fa-angle-right
+        %i.fas.fa-angle-right
+        = link_to'変更する', @user, class: "buy-user-info-fix"
     %section.buy-content.buy-user-info.last
       .buy-content-inner
         %h3 支払い方法
@@ -45,8 +44,7 @@
         %figure
           %img{alt: "jcb", height: "20", src: "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?1016580576", width: "26"}
         %p
-        %a.buy-user-info-fix{href: "https://www.mercari.com/jp/transaction/select_card/m11759556552/"}
-          %span 変更する
-          %i.fas.fa-angle-right
+        %i.fas.fa-angle-right
+        = link_to'変更する', @user, class: "buy-user-info-fix clearfix"
 
   = render 'devise/shared/registration-footer'

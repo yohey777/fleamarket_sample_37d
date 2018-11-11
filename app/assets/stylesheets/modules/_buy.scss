@@ -115,17 +115,18 @@ main.single-main{
         text-decoration: none;
         touch-action: manipulation;
         display: block;
-        text-align: right;
-        span{
-          color: #0099e8;
-          vertical-align: middle;
-        }
-        i.fa-angle-right{
-          vertical-align: middle;
-          margin: 0 0 0 8px;
-          font-size: 15px;
-          color: #0099e8;
-        }
+        color: #0099e8;
+        vertical-align: middle;
+        float: right;
+        width: 56px;
+      }
+      i.fa-angle-right{
+        display: block;
+        vertical-align: middle;
+        margin: 0 0 0 8px;
+        font-size: 15px;
+        color: #0099e8;
+        float: right;
       }
       p.buy-user-info-text{
         margin: 8px 0 0;
