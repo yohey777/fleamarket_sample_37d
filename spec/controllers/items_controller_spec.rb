@@ -12,7 +12,6 @@ describe ItemsController, type: :controller do
   end
 
    describe 'POST #create' do
-
     it 'item successfully saved' do
         item = build(:item)
         expect{item.save}.to change{Item.count}.by(1)
