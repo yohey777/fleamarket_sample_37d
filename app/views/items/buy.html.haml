@@ -1,0 +1,50 @@
+%body
+  = render 'single-header'
+  %main.single-main
+    %h2.l-single-head 購入を確定しますか？
+    %section.buy-content.buy-item
+      .buy-content-inner
+        %h3.buy-item-image
+          %img.lazyloaded.is-higher-width{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11759556552_1.jpg?1539773869"}
+        %p.buy-item-name.bold 週末だけSALE！女の子 スカート
+        %form.buy-form{action: "https://www.mercari.com/jp/transaction/buy/done/m11759556552/", method: "POST", novalidate: "novalidate"}
+          %p.buy-price.bold
+            ¥ 750
+            %span.item-shipping-fee.bold 送料込み
+          %ul.buy-accordion.not-have
+            %li
+              .accordion-toggle
+                ポイントはありません
+          %ul.buy-price-table
+            %li.buy-price-row.buy-you-pay.bold
+              .buy-price-cell 支払い金額
+              .buy-price-cell
+                %span ¥ 750
+          %button.btn-default.btn-red.bold{type: "submit"} 購入する
+          %input#is_yuu_yuu_mercari_bin{type: "hidden"}/
+    %section.buy-content.buy-user-info
+      .buy-content-inner
+        %h3 配送先
+        %address.buy-user-info-text
+          〒000-0000
+          %br/
+          神奈川県 横浜市青葉区
+          245 203号室
+          %br/
+          山田 花子
+        %i.fas.fa-angle-right
+        = link_to'変更する', @user, class: "buy-user-info-fix"
+    %section.buy-content.buy-user-info.last
+      .buy-content-inner
+        %h3 支払い方法
+        %p.buy-user-info-text
+          ************2327
+          %br/
+          01 / 99
+        %figure
+          %img{alt: "jcb", height: "20", src: "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?1016580576", width: "26"}
+        %p
+        %i.fas.fa-angle-right
+        = link_to'変更する', @user, class: "buy-user-info-fix clearfix"
+
+  = render 'devise/shared/registration-footer'
