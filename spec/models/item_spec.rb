@@ -64,25 +64,25 @@ describe User do
     end
 
     it "is valid with a name that has less than 40 characters " do
-      user = build(:item, name: "aaaaaa")
+      user = build(:item, name: "a"*40)
       expect(item).to be_valid
     end
 
     it "is invalid with a name that has more than 41 characters " do
-      item = build(:item, description: "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO")
-      item.valid?
-      expect(item.errors[:item]).to include("is too long")
+      item = build(:item, name: "a"*41)
+      expect(item).to be_invalid
     end
 
     it "is valid with a name that has less than 1000 characters " do
-      user = build(:item, description: "ABCDEFG")
+      user = build(:item, description: "a"*1000)
       expect(item).to be_valid
     end
 
     it "is invalid with a description that has more than 1000 characters " do
-      item = build(:item, description: "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM")
-      item.valid?
-      expect(item.errors[:item]).to include("is too long")
+      item = build(:item, description: "a"*1001)
+      expect(item).to be_invalid
+
+
     end
 
     it "is valid with a price that has more than 300 " do
@@ -92,8 +92,7 @@ describe User do
 
     it "is invalid with a name that has less than 299 " do
       item = build(:item, price: 299)
-      item.valid?
-      expect(item.errors[:item]).to include("is too small")
+      expect(item).to be_invalid
     end
 
     it "is valid with a price that has less than 9999999 " do
@@ -103,8 +102,7 @@ describe User do
 
     it "is invalid with a name that has more than 10000000 " do
       item = build(:item, price: 100000000)
-      item.valid?
-      expect(item.errors[:item]).to include("is too large")
+      expect(item).to be_invalid
     end
 
   end
