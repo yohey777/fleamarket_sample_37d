@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
 
+  before_action :set_user
+
   def index
   end
 
@@ -16,6 +18,10 @@ class AddressesController < ApplicationController
       end
   end
 
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
 
   private
   def address_params
@@ -25,7 +31,7 @@ class AddressesController < ApplicationController
       :first_name_kana,
       :last_name_kana,
       :postal_code,
-      :prefecture,
+      :prefecture_code,
       :city,
       :street_number,
       :building_name,
