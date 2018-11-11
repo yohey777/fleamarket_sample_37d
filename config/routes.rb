@@ -12,15 +12,15 @@ Rails.application.routes.draw do
 
   resources :items do
     collection do
+      get 'buy'
+    end
+    collection do
       get 'method_of_payment'
       post 'payment'
     end
-
-    post 'images' => 'images#create'
   end
   root 'items#index'
   get   'users/sign_up/6'  =>  'users#registration_completion'
-
 
 
 
