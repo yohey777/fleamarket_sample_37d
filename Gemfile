@@ -85,3 +85,5 @@ gem 'nokogiri'
 gem 'payjp'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'dotenv-rails'
+gem 'rails-controller-testing'
+
