@@ -19,22 +19,22 @@
           .owl-stage-outer
             .owl-stage{style: "left: 0px; width: 1200px;"}
               .owl-item.active
-                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_1.jpg?1540710290"}/
+                = image_tag @item.images.first.image_url, size: "300x300", class: "owl-lazy"
               .owl-item
-                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_2.jpg?1540710290"}/
+                = image_tag @item.images.second.image_url, size: "300x300", class: "owl-lazy"
               .owl-item
-                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}/
+                = image_tag @item.images.third.image_url, size: "300x300", class: "owl-lazy"
               .owl-item
-                %img.owl-lazy{alt: "新品未使用！シュプリーム  レザーIDホルダー ブラック", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_4.jpg?1540710290"}/
+                = image_tag @item.images.fourth.image_url, size: "300x300", class: "owl-lazy"
           %ul.owl-dots.clearfix
             %li.owl-dot.active
-              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_1.jpg?1540710290"}
+              = image_tag @item.images.first.image_url, size: "75x75", class: "owl-lazy"
             %li.owl-dot
-              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_2.jpg?1540710290"}
+              = image_tag @item.images.second.image_url, size: "75x75", class: "owl-lazy"
             %li.owl-dot
-              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}
+              = image_tag @item.images.third.image_url, size: "75x75", class: "owl-lazy"
             %li.owl-dot
-              %img.owl-dot-inner{src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m48659285686_3.jpg?1540710290"}
+              = image_tag @item.images.fourth.image_url, size: "75x75", class: "owl-lazy"
         %table.item-detail-table
           %tbody
             %tr
@@ -92,9 +92,11 @@
                 = @item.arrival_date
       .item-price-box
         %span.item-price.bold
-          = number_to_currency(@item.price, unit: "￥", precision: 0)
+          ￥
+          = @item.price
         %span.item-tax (税込)
-        %span.item-shipping-fee 送料込み
+        %span.item-shipping-fee
+          = @item.expense
       %a.item-buy-btn.bold{"data-client": "hidden", href: "/items/buy"} 購入画面に進む
       .item-description
         %p.item-description-inner

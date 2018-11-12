@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @images = @item.images.order("created_at DESC")
   end
 
   def new
@@ -32,7 +33,7 @@ class ItemsController < ApplicationController
   private
 
   def create_params
-    params.require(:item).permit(:name, :price, :description, :status, :prefecture, :expense, :shipping_method, :arrival_date, :like_count, :L_category_id, :M_category_id, :S_category_id, :size_id, :brand_id, images_attributes:[:id, :image_url])
+    params.require(:item).permit(:name, :price, :description, :status, :prefecture, :expense, :shipping_method, :arrival_date, :like_count, :L_category_id, :M_category_id, :S_category_id, :size_id, :brand_id, images_attributes:[:id, :image_url, :item_id]).merge(user_id: current_user.id)
   end
 
   def method_of_payment
