@@ -2,9 +2,6 @@ class AddressesController < ApplicationController
 
   before_action :set_user
 
-  def index
-  end
-
   def new
     @address = Address.new
   end
