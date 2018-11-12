@@ -4,7 +4,11 @@ ja:
       address: 住所
     attributes:
       address:
-        first_name_kana: お名前カナ
-        last_name_kana: お名前カナ
+        first_name: 苗字
+        last_name: 姓名
+        first_name_kana: お名前カナ（苗字）
+        last_name_kana: お名前カナ（姓名）
         postal_code: 郵便番号
         telephone_number: 電話番号
+        city: 市区町村
+        street_number: 番地
