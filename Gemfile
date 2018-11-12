@@ -47,6 +47,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'devise'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -66,7 +68,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
-gem 'devise'
 gem 'ransack'
 gem 'haml-rails'
 gem 'erb2haml'

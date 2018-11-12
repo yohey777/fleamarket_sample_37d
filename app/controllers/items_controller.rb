@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @images = @item.images
+    @images = @item.images.order("created_at DESC")
   end
 
   def new
