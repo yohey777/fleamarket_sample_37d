@@ -1,0 +1,159 @@
+
+
+
+.pulldownmenu{
+    width:250px;
+    height:600px;
+    display:none;
+    position: absolute;
+    top: 90px;
+    left: 400px;
+    z-index: 1000;
+    background: #fff;
+}
+
+ul.pc-header-nav-parent-wrap{
+  list-style: none;
+}
+
+body{
+    z-index:1;
+}
+
+header{
+    z-index:2;
+}
+
+li.header-nav-parent{
+    width: 224px;
+}
+
+.header-nav-parent h3 {
+    font-weight: 400;
+    font-size: 14px;
+        a{
+        padding: 0 16px;
+        line-height: 44px;
+        }
+}
+
+.pc-header-nav-parent-ledies h3 a {
+    padding: 0 16px;
+    line-height: 44px;
+}
+.pc-header-nav-parent-mens h3 a {
+    padding: 0 16px;
+    line-height: 44px;
+}
+.pc-header-nav-parent-baby h3 a {
+    padding: 0 16px;
+    line-height: 44px;
+}
+
+.pc-header-nav-child-ledies a{
+   padding: 0 16px;
+    line-height: 44px;
+}
+.pc-header-nav-child-mens a{
+   padding: 0 16px;
+    line-height: 44px;
+}
+.pc-header-nav-child-baby a{
+   padding: 0 16px;
+    line-height: 44px;
+}
+
+
+
+.pc-header-nav-child{
+    background-color: red;
+    width:250px;
+    height:600px;
+    display:none;
+    position: absolute;
+    top: 0px;
+    left: 251px;
+    z-index: 1001;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+}
+
+.pc-header-nav-child-ledies{
+    background-color: red;
+    width:250px;
+    height:600px;
+    display:none;
+    position: absolute;
+    top: 0px;
+    clear:both;
+    left: 251px;
+    z-index: 1001;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+    li {
+         clear:both;
+    }
+}
+
+li.pc-header-nav-child-mens{
+    width:250px;
+    height:600px;
+    display:none;
+    position: absolute;
+    clear:both!important;
+    top: 0px;
+    left: 251px;
+    z-index: 1001;
+    background: #fff;
+    clear:both;
+}
+
+.pc-header-nav-child-baby{
+    background-color: red;
+    width:250px;
+    height:600px;
+    display:none;
+    position: absolute;
+    top: 0px;
+    clear:both;
+    left: 251px;
+    z-index: 1001;
+    background: #fff;
+         clear:both;
+
+}
+
+        nav.l-left2{
+            float:left;
+          ul{
+            li{
+            list-style: none;
+            list-style-position: outside;
+            // float: left;
+              h2{
+                .nav__goods{
+                  // height: 38px;
+                  line-height: 32px;
+                  font-size: 13.5px;
+                  display: block;
+                  color: #333;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+
+        .nav__goods2{
+                  // height: 38px;
+                  line-height: 32px;
+                  font-size: 13.5px;
+                  display: block;
+                  color: #333;
+                  font-weight: 400;
+                  position: absolute;
+                  left: 550px;
+                  top: 55px;
+                }

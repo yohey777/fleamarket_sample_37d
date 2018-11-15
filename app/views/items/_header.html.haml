@@ -8,15 +8,16 @@
         %input.header-input{name: "keyword", placeholder: "キーワードから探す", type: "search", value: ""}
         %i.fa.fa-search.icon
     .nav-box.clearfix
-      %nav.l-left
+      %nav.l-left2
         %ul
           %li
-            %h2
-              %a.nav__goods{href:""}
+            %h2.nav__visi
+              %a.nav__goods
                 カテゴリーから探す
+                =render 'shared/category_tab'
           %li
             %h2
-              %a.nav__goods{href:""}
+              %a.nav__goods2{href:""}
                 ブランドから探す
       .l-right
         -if user_signed_in?
